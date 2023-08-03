@@ -11,15 +11,12 @@
           Sales/Purchase Popup: Skyrocket Your Sales! 🚀
         </div>
         <div class="font-text text-[16px] mt-5 leading-7">
-          Get ready to boost your e-commerce sales like never before! Our
-          Sales/Purchase Popup is the ultimate secret weapon in your arsenal.
-          🛍️💥 With eye-catching designs and customizable templates, you'll
-          captivate your customers from the moment they arrive. Watch the magic
-          happen as real-time updates of sign-ups and purchases create a
-          powerful sense of social proof. Leverage the psychology of FOMO (Fear
-          of Missing Out) and build trust, credibility, and conversions that
-          soar to new heights. Don't wait for success – try our Sales/Purchase
-          Popup now and witness your revenue take off! 🚀💰
+          Supercharge your e-commerce sales with our Sales/Purchase Popup! 🛍️💥
+          Captivate customers with eye-catching designs and customizable
+          templates. Watch real-time updates of purchases create a powerful
+          sense of social proof. Leverage FOMO (Fear of Missing Out) to build
+          trust, credibility, and boost conversions. Don't wait – try our popup
+          now and see your revenue take off! 🚀💰
         </div>
       </div>
     </div>
@@ -28,17 +25,17 @@
       <div class="flex">
         <div class="w-[80%] ml-auto">
           <div class="font-title text-[22px] font-[600]">
-            Add to Cart Popup: Grab It Now! 🛒
+            Design and Customization: Your Brand, Your Way! 🎨
           </div>
           <div class="font-text text-[16px] mt-5 leading-7">
-            Turn visitors into happy customers with our Add to Cart Popup! 🛍️
-            Customize your popup with stunning designs that align perfectly with
-            your brand. When it's the perfect time, our smart triggers strike
-            with irresistible offers that encourage immediate action. Increase
-            your average order value effortlessly by showcasing related products
-            or upselling items. Don't let your customers abandon their carts –
-            seize the opportunity with our Add to Cart Popup and watch the magic
-            unfold! 🛒💫
+            Make a statement with our Design and Customization options! ✨
+            Create popups that reflect your brand's personality and wow your
+            customers. Choose from a wide range of stunning templates and
+            customize every detail to perfection. 💻 Whether it's colors, fonts,
+            or visuals, we've got you covered. Don't settle for ordinary – let
+            your creativity shine and elevate your e-commerce game! 🚀🎉 Your
+            brand, your way – with our Design and Customization, the
+            possibilities are limitless! 🌟🛍️
           </div>
         </div>
       </div>
@@ -69,15 +66,14 @@
       <div class="flex">
         <div class="w-[80%] ml-auto">
           <div class="font-title text-[22px] font-[600]">
-            Welcome Popup: Welcome to Awesomeness! 🌟
+            Optin Popups: Grow Lists with Exclusive Deals! 🎉📧📱
           </div>
           <div class="font-text text-[16px] mt-5 leading-7">
-            Roll out the red carpet for your website visitors with our Welcome
-            Popup! 🎉 Create a memorable first impression with warm and inviting
-            greetings. Showcase exclusive offers that set the stage for an
-            exceptional customer journey. Turn first-time visitors into loyal
-            customers with style! 🤝🎈 Say hello to success with our Welcome
-            Popup and make every new experience unforgettable! 🛍️🌈
+            Level up your marketing game with our Optin Popups! 🚀✨ Offer
+            exclusive discounts to captivate visitors and expand your email and
+            SMS marketing lists. Custom designs make your brand shine, while
+            valuable incentives entice subscribers. Elevate your reach and
+            engagement today! 🌟🎯📈
           </div>
         </div>
       </div>
@@ -90,16 +86,15 @@
       </div>
       <div class="w-[80%]">
         <div class="font-title text-[22px] font-[600]">
-          Design and Customization: Your Brand, Your Way! 🎨
+          Welcome Popup: Welcome to Awesomeness! 🌟
         </div>
         <div class="font-text text-[16px] mt-5 leading-7">
-          Make a statement with our Design and Customization options! ✨ Create
-          popups that reflect your brand's personality and wow your customers.
-          Choose from a wide range of stunning templates and customize every
-          detail to perfection. 💻 Whether it's colors, fonts, or visuals, we've
-          got you covered. Don't settle for ordinary – let your creativity shine
-          and elevate your e-commerce game! 🚀🎉 Your brand, your way – with our
-          Design and Customization, the possibilities are limitless! 🌟🛍️
+          Roll out the red carpet for your website visitors with our Welcome
+          Popup! 🎉 Create a memorable first impression with warm and inviting
+          greetings. Showcase exclusive offers that set the stage for an
+          exceptional customer journey. Turn first-time visitors into loyal
+          customers with style! 🤝🎈 Say hello to success with our Welcome Popup
+          and make every new experience unforgettable! 🛍️🌈
         </div>
       </div>
     </div>

@@ -13,8 +13,7 @@ import logo from "@/assets/images/logo.png";
           </div>
         </div>
         <div class="text-gray-200 mt-5">
-          Discover CleverPopups - Your secret weapon for real-time social proof
-          that converts more sales and leads! 🚀📈
+          Real-time social proof that converts! 🚀📈
         </div>
       </div>
     </div>
