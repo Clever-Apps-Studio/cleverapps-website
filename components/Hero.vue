@@ -27,7 +27,7 @@ import popup from "@/assets/images/popup.png";
       <div>
         <div class="w-[150px] mt-10">
           <Button class="h-[50px]" type="normal" color="default" rounded
-            >Try it</Button
+            >Try it for free</Button
           >
         </div>
       </div>

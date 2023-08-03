@@ -36,7 +36,9 @@ onMounted(() => {
           <NuxtLink to="/login" class="mr-10 cursor-pointer">Pricing</NuxtLink>
           <!-- <div class="font-text mr-10 cursor-pointer">Product</div> -->
           <div class="mr-10 cursor-pointer font-text">
-            <Button type="normal" color="default" rounded>Try it</Button>
+            <Button type="normal" color="default" rounded
+              >Try it for free</Button
+            >
           </div>
         </div>
       </div>
@@ -60,7 +62,9 @@ onMounted(() => {
           <NuxtLink to="/login" class="mr-10 cursor-pointer">Pricing</NuxtLink>
           <!-- <div class="font-text mr-10 cursor-pointer">Product</div> -->
           <div class="mr-10 cursor-pointer font-text">
-            <Button type="normal" color="default" rounded>Try it</Button>
+            <Button class="!px-5" type="normal" color="default" rounded
+              >Try it for free</Button
+            >
           </div>
         </div>
       </div>
