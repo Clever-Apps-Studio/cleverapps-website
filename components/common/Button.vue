@@ -9,7 +9,7 @@ const emit = defineEmits(["click"]);
 const props = withDefaults(
   defineProps<{
     type: "outline" | "normal";
-    color: "success" | "danger" | "default";
+    color: "success" | "danger" | "default" | "light";
     loading?: boolean;
     rounded: boolean;
   }>(),

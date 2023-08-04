@@ -20,4 +20,5 @@ export const buttonVariantsRef = ref({
   normal_success: " rounded bg-jetGreen text-white hover:bg-green-500",
   normal_danger: " rounded bg-jetRed text-white hover:bg-red-500",
   normal_default: " rounded bg-black text-white ",
+  normal_light: " rounded bg-white text-black ",
 });

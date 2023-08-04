@@ -1,6 +1,6 @@
 <script setup>
 import Features from "@/components/sections/Features.vue";
-import CTA from "@/components/sections/CTA.vue";
+import Options from "@/components/sections/Options.vue";
 import Pricing from "@/components/sections/Pricing.vue";
 import Footer from "@/components/sections/Footer.vue";
 </script>
@@ -10,7 +10,7 @@ import Footer from "@/components/sections/Footer.vue";
     <Nav />
     <Hero />
     <Features />
-    <CTA />
+    <Options />
     <Pricing />
     <Footer />
   </div>
