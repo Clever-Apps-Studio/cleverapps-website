@@ -5,7 +5,7 @@ export default {
       colors: {
         primary: defaultTheme.colors.green,
         cleverYellow: "#f2b722",
-        cleverGreen: "#1ac957",
+        cleverGreen: "#47C00E",
         cleverBlack: "#05102C",
         cleverText: "#052543",
       },

@@ -252,9 +252,9 @@
               transfer the data, including Personal Data, to the US and process
               it there. Our servers are located in the US. Your consent to this
               Privacy Policy followed by your submission of such information
-              represents your agreement to that transfer.Kudobuzz INC will take
-              all steps reasonably necessary to ensure that your data is treated
-              securely and in accordance with this Privacy Policy and no
+              represents your agreement to that transfer.CleverApps INC will
+              take all steps reasonably necessary to ensure that your data is
+              treated securely and in accordance with this Privacy Policy and no
               transfer of your Personal Data will take place to an organization
               or a country unless there are adequate controls in place including
               the security of your data and other personal information.
@@ -284,7 +284,7 @@
             Disclosure for Law Enforcement
           </div>
           <div class="font-text text-[18px] font-[300]">
-            Under certain circumstances, Kudobuzz INC may be required to
+            Under certain circumstances, CleverApps INC may be required to
             disclose your Personal Data if required to do so by law or in
             response to valid requests by public authorities (e.g. a court or a
             government agency).
@@ -369,7 +369,7 @@
           </ul>
           <div class="font-text text-[18px] font-[300]">
             You have the right to data portability for the information you
-            provide to Kudobuzz INC. You can request to obtain a copy of your
+            provide to CleverApps INC. You can request to obtain a copy of your
             Personal Data in a commonly used electronic format so that you can
             manage and move it. Please note that we may ask you to verify your
             identity before responding to such requests.

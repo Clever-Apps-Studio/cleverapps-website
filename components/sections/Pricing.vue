@@ -16,7 +16,10 @@ const prices = [
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center min-h-[500px] mb-20">
+  <div
+    id="pricing"
+    class="flex flex-col items-center justify-center min-h-[500px] mb-20"
+  >
     <div class="flex flex-col justify-center text-center">
       <div class="font-title text-[25px] font-[900]">
         <div>Simple and affordable pricing</div>

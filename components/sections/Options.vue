@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import GIcons from "@/components/common/GIcons.vue";
+</script>
 
 <template>
   <div class="flex flex-col items-center min-h-[600px] p-12 bg-white mb-20">
@@ -6,8 +8,8 @@
       Why CleverPopups?
     </div>
     <div class="grid grid-cols-2 gap-10 w-[70%] justify-center mt-20">
-      <div class="flex">
-        <div></div>
+      <div class="flex items-center">
+        <GIcons name="celebration" class="!text-[100px] mr-5 text-[#47C00E]" />
         <div>
           <div class="font-title text-[20px] font-bold">
             Free festive templates
@@ -20,7 +22,7 @@
         </div>
       </div>
       <div class="flex">
-        <div></div>
+        <GIcons name="palette" class="!text-[100px] mr-5 text-[#47C00E]" />
         <div>
           <div class="font-title text-[20px] font-bold">
             Beautifully responsive design
@@ -33,8 +35,8 @@
       </div>
     </div>
     <div class="grid grid-cols-2 gap-10 w-[70%] justify-center mt-20">
-      <div class="flex">
-        <div></div>
+      <div class="flex items-center">
+        <GIcons name="grid_view" class="!text-[100px] mr-5 text-[#47C00E]" />
         <div>
           <div class="font-title text-[20px] font-bold">
             Better user experience
@@ -46,8 +48,8 @@
           </div>
         </div>
       </div>
-      <div class="flex">
-        <div></div>
+      <div class="flex items-center">
+        <GIcons name="tune" class="!text-[100px] mr-5 text-[#47C00E]" />
         <div>
           <div class="font-title text-[20px] font-bold">Advanced settings</div>
           <div class="font-text text-[16px] mt-5">

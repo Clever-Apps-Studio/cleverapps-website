@@ -19,7 +19,7 @@ const props = defineProps<{ item: IItem }>();
 </script>
 
 <template>
-  <div class="w-[500px] min-h-[500px] border rounded-[10px]">
+  <div class="w-[500px] min-h-[500px] border rounded-[10px] bg-white">
     <div class="p-5">
       <div class="flex flex-col items-center justify-center pt-5">
         <div class="font-title text-[20px] font-bold">Boost your sales</div>

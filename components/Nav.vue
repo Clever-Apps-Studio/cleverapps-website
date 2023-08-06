@@ -33,7 +33,7 @@ onMounted(() => {
 
       <div class="flex items-center">
         <div class="flex items-center font-albert">
-          <NuxtLink to="/login" class="mr-10 cursor-pointer">Pricing</NuxtLink>
+          <a href="#pricing" class="mr-10 cursor-pointer">Pricing</a>
           <!-- <div class="font-text mr-10 cursor-pointer">Product</div> -->
           <div class="mr-10 cursor-pointer font-text">
             <Button type="normal" color="default" rounded
@@ -59,7 +59,7 @@ onMounted(() => {
 
       <div class="flex items-center">
         <div class="flex items-center font-albert">
-          <NuxtLink to="/login" class="mr-10 cursor-pointer">Pricing</NuxtLink>
+          <a href="#pricing" class="mr-10 cursor-pointer">Pricing</a>
           <!-- <div class="font-text mr-10 cursor-pointer">Product</div> -->
           <div class="mr-10 cursor-pointer font-text">
             <Button class="!px-5" type="normal" color="default" rounded
