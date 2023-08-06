@@ -1,6 +1,9 @@
 <script setup>
-import Button from "@/components/common/Button.vue";
+import GIcons from "./common/GIcons.vue";
+import Button from "./common/Button.vue";
 import logo from "@/assets/images/logo.png";
+
+const route = useRoute();
 
 const showSideBar = ref(false);
 onMounted(() => {
@@ -13,6 +16,19 @@ onMounted(() => {
     }
   });
 });
+
+const invert = computed(() => {
+  console.log("hey---", route.name);
+  if (route.name.toLowerCase().includes("privacy")) {
+    return true;
+  }
+  return false;
+});
+
+const isHomePage = computed(() => {
+  if (route.name === "popups") return true;
+  return false;
+});
 </script>
 
 <template>
@@ -21,10 +37,19 @@ onMounted(() => {
       class="absolute flex justify-between top-0 left-0 right-0 z-10 text-cleverBlack py-5"
     >
       <div class="flex items-center pl-10">
-        <div class="flex items-center">
-          <img class="w-[50px]" :src="logo" />
-          <div class="font-title text-[16px] font-[700]">CleverPopups</div>
-        </div>
+        <NuxtLink to="/popups">
+          <div class="flex items-center">
+            <img class="w-[50px]" :src="logo" />
+            <div
+              class="font-title text-[16px] font-[700]"
+              :class="{
+                'text-white': invert,
+              }"
+            >
+              CleverPopups
+            </div>
+          </div>
+        </NuxtLink>
 
         <div class="flex ml-10 items-center">
           <!-- <div class="font-text mr-10 cursor-pointer">Concerts</div> -->
@@ -33,10 +58,18 @@ onMounted(() => {
 
       <div class="flex items-center">
         <div class="flex items-center font-albert">
-          <a href="#pricing" class="mr-10 cursor-pointer">Pricing</a>
+          <a
+            v-if="isHomePage"
+            href="#pricing"
+            class="mr-10 cursor-pointer"
+            :class="{
+              'text-white': invert,
+            }"
+            >Pricing</a
+          >
           <!-- <div class="font-text mr-10 cursor-pointer">Product</div> -->
           <div class="mr-10 cursor-pointer font-text">
-            <Button type="normal" color="default" rounded
+            <Button type="normal" :color="invert ? 'light' : 'default'" rounded
               >Try it for free</Button
             >
           </div>
@@ -48,10 +81,12 @@ onMounted(() => {
       class="fixed border-b bg-white flex justify-between left-0 z-10 text-black w-full py-5 transition-all top-[-100px] duration-500"
     >
       <div class="flex items-center pl-10">
-        <div class="flex items-center">
-          <img class="w-[50px]" :src="logo" />
-          <div class="font-title text-[16px] font-[700]">CleverPopups</div>
-        </div>
+        <NuxtLink to="/popups">
+          <div class="flex items-center">
+            <img class="w-[50px]" :src="logo" />
+            <div class="font-title text-[16px] font-[700]">CleverPopups</div>
+          </div>
+        </NuxtLink>
         <div class="flex ml-10 items-center text-albert">
           <!-- <div class="font-text mr-10 cursor-pointer">Concerts</div> -->
         </div>
@@ -59,7 +94,9 @@ onMounted(() => {
 
       <div class="flex items-center">
         <div class="flex items-center font-albert">
-          <a href="#pricing" class="mr-10 cursor-pointer">Pricing</a>
+          <a href="#pricing" class="mr-10 cursor-pointer" v-if="isHomePage"
+            >Pricing</a
+          >
           <!-- <div class="font-text mr-10 cursor-pointer">Product</div> -->
           <div class="mr-10 cursor-pointer font-text">
             <Button class="!px-5" type="normal" color="default" rounded

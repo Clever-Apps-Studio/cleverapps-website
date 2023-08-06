@@ -66,6 +66,9 @@ import feature5 from "@/assets/images/feature5.png";
           keep your customers coming back for more! Leverage the power of our
           Exit Intent Popup today and watch your sales skyrocket!
         </div>
+        <div class="mt-3 min-w-[100px] w-fit">
+          <Badge label="Coming Soon" />
+        </div>
       </div>
     </div>
 
@@ -81,6 +84,9 @@ import feature5 from "@/assets/images/feature5.png";
             marketing lists. Custom designs make your brand shine, while
             valuable incentives entice subscribers. Elevate your reach and
             engagement today!
+          </div>
+          <div class="mt-3 min-w-[100px] w-fit">
+            <Badge label="Coming Soon" />
           </div>
         </div>
       </div>
@@ -103,6 +109,9 @@ import feature5 from "@/assets/images/feature5.png";
           align with your brand's identity and watch your announcements make a
           significant impact. Elevate engagement and seize the opportunity to
           captivate your audience!
+        </div>
+        <div class="mt-3 min-w-[100px] w-fit">
+          <Badge label="Coming Soon" />
         </div>
       </div>
     </div>
