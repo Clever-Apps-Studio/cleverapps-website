@@ -12,7 +12,7 @@ import feature5 from "@/assets/images/feature5.png";
       <div
         class="flex justify-center col-span-2 lg:col-span-1 lg:justify-start"
       >
-        <div class="w-[50%] min-w-[300px] lg:ml-auto lg:w-[80%]">
+        <div class="w-[100%] p-10 md:p-0 min-w-[300px] lg:ml-auto lg:w-[80%]">
           <img :src="feature1" />
         </div>
       </div>
@@ -57,7 +57,7 @@ import feature5 from "@/assets/images/feature5.png";
       <div
         class="order-1 lg:order-2 flex justify-center col-span-2 lg:col-span-1 lg:justify-start"
       >
-        <div class="w-[50%] min-w-[300px] lg:w-[80%]">
+        <div class="w-[100%] p-10 md:p-0 min-w-[300px] lg:w-[80%]">
           <img :src="feature2" />
         </div>
       </div>
@@ -67,7 +67,7 @@ import feature5 from "@/assets/images/feature5.png";
       <div
         class="flex justify-center col-span-2 lg:col-span-1 lg:justify-start"
       >
-        <div class="w-[50%] min-w-[300px] lg:ml-auto lg:w-[80%]">
+        <div class="w-[100%] p-10 md:p-0 min-w-[300px] lg:ml-auto lg:w-[80%]">
           <img :src="feature3" />
         </div>
       </div>
@@ -117,7 +117,7 @@ import feature5 from "@/assets/images/feature5.png";
       <div
         class="order-1 lg:order-2 flex justify-center col-span-2 lg:col-span-1 lg:justify-start"
       >
-        <div class="w-[50%] min-w-[300px] lg:w-[80%]">
+        <div class="w-[100%] p-10 md:p-0 min-w-[300px] lg:w-[80%]">
           <img :src="feature4" />
         </div>
       </div>
@@ -127,7 +127,7 @@ import feature5 from "@/assets/images/feature5.png";
       <div
         class="flex justify-center col-span-2 lg:col-span-1 lg:justify-start"
       >
-        <div class="w-[50%] min-w-[300px] lg:ml-auto lg:w-[80%]">
+        <div class="w-[100%] p-10 md:p-0 min-w-[300px] lg:ml-auto lg:w-[80%]">
           <img :src="feature5" />
         </div>
       </div>
