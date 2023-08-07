@@ -12,9 +12,11 @@ import popup from "@/assets/images/popup.png";
 
 <template>
   <div
-    class="grid grid-cols-2 justify-center items-center !pt-[140px] sm:p-20 bg-white"
+    class="grid grid-cols-2 justify-center items-center p-10 sm:!pt-[140px] lg:p-20 bg-white"
   >
-    <div class="text-cleverBlack mt-20">
+    <div
+      class="col-span-2 text-center lg:text-left lg:col-span-1 text-cleverBlack mt-20"
+    >
       <div
         class="font-title font-[700] text-[35px] md:text-[50px] leading-none"
       >
@@ -24,7 +26,7 @@ import popup from "@/assets/images/popup.png";
         Leveraging social proof is key to success in the competitive world of
         e-commerce.
       </div>
-      <div>
+      <div class="flex justify-center lg:justify-start">
         <div class="w-[150px] mt-10">
           <Button class="h-[50px]" type="normal" color="default" rounded
             >Try it for free</Button
@@ -32,8 +34,12 @@ import popup from "@/assets/images/popup.png";
         </div>
       </div>
 
-      <div class="flex items-center mt-32">
-        <div class="font-title font-[600] text-[16px] text-gray-500 w-[200px]">
+      <div
+        class="flex flex-col lg:flex-row lg:justify-start justify-center items-center mt-32"
+      >
+        <div
+          class="font-title font-[600] text-[16px] text-gray-500 mb-4 lg:w-[200px] lg:mb-0"
+        >
           Trusted by Shopify merchants
         </div>
         <div class="w-[250px] cursor-pointer">
@@ -41,7 +47,7 @@ import popup from "@/assets/images/popup.png";
         </div>
       </div>
     </div>
-    <div class="w-[80%] ml-auto">
+    <div class="hidden lg:block w-[80%] ml-auto">
       <div class="grid grid-cols-2 gap-8 items-end relative">
         <div class="w-full relative">
           <img class="w-full" :src="hero2" />

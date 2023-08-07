@@ -19,7 +19,9 @@ const props = defineProps<{ item: IItem }>();
 </script>
 
 <template>
-  <div class="w-[500px] min-h-[500px] border rounded-[10px] bg-white">
+  <div
+    class="w-full lg:max-w-[500px] min-h-[500px] border rounded-[10px] bg-white"
+  >
     <div class="p-5">
       <div class="flex flex-col items-center justify-center pt-5">
         <div class="font-title text-[20px] font-bold">Boost your sales</div>
@@ -57,7 +59,7 @@ const props = defineProps<{ item: IItem }>();
       <div class="text-cleverGreen h-[6px] mb-2 text-[12px]">
         {{ period === "annually" ? "Save 16%" : "" }}
       </div>
-      <div class="flex items-center justify-between">
+      <div class="flex flex-col sm:flex-row items-center justify-between">
         <div class="flex">
           <div class="text-[16px]">{{ item.currency }}</div>
           <div class="font-title text-[25px] font-bold self-end leading-3">
@@ -69,7 +71,7 @@ const props = defineProps<{ item: IItem }>();
           </div>
           <div></div>
         </div>
-        <Button class="!w-[130px]"> Try it for free</Button>
+        <Button class="!w-[130px] mt-6 sm:mt-0"> Try it for free</Button>
       </div>
     </div>
   </div>

@@ -32,7 +32,7 @@ const isHomePage = computed(() => {
 </script>
 
 <template>
-  <div class="relative w-full max-[1097px]:hidden">
+  <div class="hidden relative w-full sm:block">
     <div
       class="absolute flex justify-between top-0 left-0 right-0 z-10 text-cleverBlack py-5"
     >
@@ -107,25 +107,35 @@ const isHomePage = computed(() => {
       </div>
     </div>
   </div>
-  <div class="hidden relative w-full max-[1097px]:flex">
+  <div class="flex items-center justify-between relative w-full sm:hidden p-5">
     <div
       @click="showSideBar = !showSideBar"
-      class="absolute flex justify-between top-0 left-0 right-0 z-10 text-white p-10"
+      class="flex justify-between text-white"
     >
-      <GIcons name="menu" />
+      <GIcons name="menu" class="text-cleverBlack" />
     </div>
 
-    <PSidebar v-model:visible="showSideBar">
-      <div class="font-text mr-10 cursor-pointer mb-3">Concerts</div>
-      <div class="font-text mr-10 cursor-pointer mb-3">Movies</div>
-      <div class="font-text mr-10 cursor-pointer mb-3">Theater</div>
-      <div class="font-text mr-10 cursor-pointer mb-3">Family</div>
-      <div class="w-full border-b mb-3"></div>
+    <NuxtLink to="/popups" class="">
+      <div class="flex items-center">
+        <img class="w-[50px]" :src="logo" />
+        <div class="font-title text-[16px] font-[700]">CleverPopups</div>
+      </div>
+    </NuxtLink>
 
-      <div class="mr-10 cursor-pointer mb-3 font-text">Sign In</div>
-      <div class="mr-10 cursor-pointer mb-3 font-text">Sell</div>
-      <div class="mr-10 cursor-pointer mb-3 font-text">Gift Cards</div>
-      <div class="mr-10 cursor-pointer mb-3 font-text">Help</div>
+    <PSidebar v-model:visible="showSideBar">
+      <div class="font-text mr-10 cursor-pointer mb-3">
+        <a
+          v-if="isHomePage"
+          href="#pricing"
+          class="mr-10 cursor-pointer text-cleverBlack"
+          >Pricing</a
+        >
+      </div>
+      <div class="font-text mr-10 cursor-pointer mb-3">
+        <NuxtLink class="text-cleverBlack" to="/popups/privacy"
+          >Privacy Policy</NuxtLink
+        >
+      </div>
     </PSidebar>
   </div>
 </template>
