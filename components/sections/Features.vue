@@ -109,7 +109,7 @@ import feature5 from "@/assets/images/feature5.png";
             valuable incentives entice subscribers. Elevate your reach and
             engagement today!
           </div>
-          <div class="mt-3 min-w-[100px] w-fit mx-auto">
+          <div class="mt-3 min-w-[100px] w-fit mx-auto lg:mx-0">
             <Badge label="Coming Soon" />
           </div>
         </div>
