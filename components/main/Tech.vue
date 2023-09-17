@@ -9,6 +9,7 @@ import nuxt from "../../assets/images/nuxt.png";
 import mongo from "../../assets/images/mongo.png";
 import prisma from "../../assets/images/prisma.png";
 import mysql from "../../assets/images/mysql.png";
+import figma from "../../assets/images/figma.png";
 </script>
 
 <template>
@@ -57,6 +58,10 @@ import mysql from "../../assets/images/mysql.png";
         <div class="flex flex-col items-center">
           <img class="w-[100px]" :src="prisma" />
           <div>Prisma</div>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-[100px]" :src="figma" />
+          <div>Figma</div>
         </div>
       </div>
     </div>
