@@ -4,7 +4,7 @@ import Button from "../common/Button.vue";
 useHead({
   script: [
     {
-      src: "http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js",
+      src: "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js",
       // valid options are: 'head' | 'bodyClose' | 'bodyOpen'
       tagPosition: "head",
     },
