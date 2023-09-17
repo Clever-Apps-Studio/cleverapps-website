@@ -15,6 +15,7 @@
     "nuxt": "^3.6.1"
   },
   "dependencies": {
+    "@vueuse/motion": "^2.0.0",
     "primevue": "^3.31.0"
   }
 }
