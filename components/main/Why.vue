@@ -13,7 +13,7 @@ import Title from "./Title.vue";
         <div class="flex flex-col lg:flex-row col-span-2 lg:col-span-1">
           <div>
             <GIcons
-              name="celebration"
+              name="forum"
               class="!text-[70px] lg:!text-[100px] mr-5 text-[#ffbd02]"
             />
           </div>
@@ -34,7 +34,7 @@ import Title from "./Title.vue";
         </div>
         <div class="flex flex-col lg:flex-row col-span-2 lg:col-span-1">
           <GIcons
-            name="palette"
+            name="handshake"
             class="!text-[70px] lg:!text-[100px] mr-5 text-[#ffbd02]"
           />
           <div class="text-center lg:text-left">
@@ -78,7 +78,7 @@ import Title from "./Title.vue";
           class="flex flex-col lg:flex-row col-span-2 lg:col-span-1 items-center"
         >
           <GIcons
-            name="tune"
+            name="shield_person"
             class="!text-[70px] lg:!text-[100px] mr-5 text-[#ffbd02]"
           />
           <div class="text-center lg:text-left">

@@ -5,6 +5,7 @@ import Process from "../components/main/Process.vue";
 import Why from "../components/main/Why.vue";
 import CTA from "../components/main/CTA.vue";
 import Footer from "../components/main/Footer.vue";
+import Tech from "../components/main/Tech.vue";
 </script>
 
 <template>
@@ -17,7 +18,10 @@ import Footer from "../components/main/Footer.vue";
     <div class="mt-16">
       <Process />
     </div>
-    <div class="mt-16">
+    <div>
+      <Tech />
+    </div>
+    <div class="">
       <Why />
     </div>
     <div>
