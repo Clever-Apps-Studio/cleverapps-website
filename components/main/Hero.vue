@@ -38,7 +38,7 @@ onMounted(() => {
         <div class="mr-4">
           <Button class="!px-10 py-7" type="normal" color="light">
             <div class="text-[20px] !font-text font-[500]">
-              Get Started
+              Let's talk
             </div></Button
           >
         </div>

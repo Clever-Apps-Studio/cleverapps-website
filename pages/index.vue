@@ -6,23 +6,29 @@ import Why from "../components/main/Why.vue";
 import CTA from "../components/main/CTA.vue";
 import Footer from "../components/main/Footer.vue";
 import Tech from "../components/main/Tech.vue";
+import Pricing from "../components/main/Pricing.vue";
+import Nav from "../components/main/Nav.vue";
 </script>
 
 <template>
   <div class="">
+    <Nav />
     <Hero />
     <div>
       <PitchVue />
     </div>
 
-    <div class="mt-16">
+    <div id="howItWorks" class="mt-16">
       <Process />
     </div>
-    <div>
+    <div id="techStack">
       <Tech />
     </div>
     <div class="">
       <Why />
+    </div>
+    <div id="price">
+      <Pricing />
     </div>
     <div>
       <CTA />
