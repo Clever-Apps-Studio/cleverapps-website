@@ -28,7 +28,7 @@ import popup from "@/assets/images/popup.png";
       </div>
       <div class="flex justify-center lg:justify-start">
         <div class="w-[150px] mt-10">
-          <Button class="h-[50px]" type="normal" color="default" rounded
+          <Button to="https://apps.shopify.com/cleverpopups-production" external class="h-[50px]" type="normal" color="default" rounded
             >Try it for free</Button
           >
         </div>

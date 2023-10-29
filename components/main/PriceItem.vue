@@ -59,7 +59,7 @@ const props = defineProps<{ item: IItem }>();
       </div>
     </div>
     <div class="flex items-center justify-center border-t p-5">
-      <Button class="!w-[130px] mt-6 sm:mt-0"> Let's Talks</Button>
+      <Button class="!w-[130px] mt-6 sm:mt-0"> Let's Talk</Button>
     </div>
   </div>
 </template>

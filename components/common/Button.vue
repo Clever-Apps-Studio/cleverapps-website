@@ -12,15 +12,19 @@ const props = withDefaults(
     color: "success" | "danger" | "default" | "light";
     loading?: boolean;
     rounded: boolean;
+    to?: string;
+    external?: boolean;
   }>(),
   {
     type: "normal",
     color: "default",
     loading: false,
     rounded: true,
+    to: "",
+    external: false,
   }
 );
-
+const router = useRouter()
 const styleSelection = computed(() => {
   return {
     button: true,
@@ -31,7 +35,22 @@ const styleSelection = computed(() => {
 const classString = computed(() => {
   return useVariant(styleSelection, buttonVariantsRef);
 });
+
+const handleClick = () => {
+  if (props.loading) return;
+  if (props.to && !props.external) {
+    router.push(props.to);
+    return
+  }
+
+  if(props.external){
+    navigateTo(props.to, { external: true })
+    return
+  }
+  emit("click");
+};
 </script>
+
 <template>
   <div
     :class="[
@@ -39,12 +58,7 @@ const classString = computed(() => {
       loading && 'cursor-not-allowed bg-opacity-50 hover:bg-opacity-50',
       rounded && 'rounded-full',
     ]"
-    @click="
-      () => {
-        if (loading) return;
-        emit('click');
-      }
-    "
+    @click="handleClick"
   >
     <SpinnerAlt
       :classStyles="{

@@ -80,7 +80,6 @@ const isHomePage = computed(() => {
           </div>
         </NuxtLink>
         <div class="flex ml-10 items-center text-albert">
-          <!-- <div class="font-text mr-10 cursor-pointer">Concerts</div> -->
         </div>
       </div>
 
@@ -89,7 +88,6 @@ const isHomePage = computed(() => {
           <a href="#howItWorks" class="mr-10 cursor-pointer">How it works</a>
           <a href="#techStack" class="mr-10 cursor-pointer">Tech stack</a>
           <a href="#price" class="mr-10 cursor-pointer">Pricing</a>
-          <!-- <div class="font-text mr-10 cursor-pointer">Product</div> -->
           <div class="mr-10 cursor-pointer font-text">
             <Button class="!px-5" type="normal" color="default" rounded
               >Let's talk</Button
@@ -99,7 +97,7 @@ const isHomePage = computed(() => {
       </div>
     </div>
   </div>
-  <div class="flex items-center justify-between relative w-full sm:hidden p-5">
+  <div class=" items-center justify-between relative w-full hidden p-5">
     <div
       @click="showSideBar = !showSideBar"
       class="flex justify-between text-white"
@@ -109,8 +107,9 @@ const isHomePage = computed(() => {
 
     <NuxtLink to="/popups" class="">
       <div class="flex items-center">
-        <img class="w-[50px]" :src="logo" />
-        <div class="font-title text-[16px] font-[700]">CleverPopups</div>
+        <img class="w-[50px] hidden md:block" :src="logo" />
+        <img class="w-[50px] md:hidden" :src="logo2" />
+        <div class="font-title text-[16px] font-[700] ml-2">CleverPopups</div>
       </div>
     </NuxtLink>
 

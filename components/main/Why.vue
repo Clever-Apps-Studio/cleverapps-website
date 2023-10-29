@@ -10,7 +10,7 @@ import Title from "./Title.vue";
       <div
         class="grid grid-cols-2 gap-10 w-[100%] lg:w-[90%] justify-center mt-20"
       >
-        <div class="flex flex-col lg:flex-row col-span-2 lg:col-span-1">
+        <div class="flex flex-col md:flex-row col-span-2 lg:col-span-1 text-center">
           <div>
             <GIcons
               name="forum"
@@ -32,7 +32,7 @@ import Title from "./Title.vue";
             </div>
           </div>
         </div>
-        <div class="flex flex-col lg:flex-row col-span-2 lg:col-span-1">
+        <div class="flex flex-col md:flex-row col-span-2 lg:col-span-1 text-center">
           <GIcons
             name="handshake"
             class="!text-[70px] lg:!text-[100px] mr-5 text-[#ffbd02]"
@@ -55,7 +55,7 @@ import Title from "./Title.vue";
         class="grid grid-cols-2 gap-10 w-[100%] lg:w-[90%] justify-center mt-20"
       >
         <div
-          class="flex flex-col lg:flex-row col-span-2 lg:col-span-1 items-center"
+          class="flex flex-col md:flex-row col-span-2 lg:col-span-1 items-center"
         >
           <GIcons
             name="grid_view"

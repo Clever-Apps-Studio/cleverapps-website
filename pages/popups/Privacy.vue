@@ -12,7 +12,7 @@ definePageMeta({
       Privacy Policy
     </div>
 
-    <div class="p-20 mx-20">
+    <div class="px-5 md:p-20 md:mx-20">
       <div>
         <div class="font-title font-[900] text-[30px] mb-5">CleverApps</div>
         <div class="font-text text-[18px] font-[300]">

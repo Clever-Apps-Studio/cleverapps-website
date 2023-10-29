@@ -17,7 +17,7 @@ const prices = [
 </script>
 
 <template>
-  <div class="flex flex-col items-center p-20">
+  <div class="flex flex-col items-center p-5 md:p-20">
     <Title text="Pricing" class="mb-10" />
     <PriceItem v-for="item in prices" :item="item" />
   </div>

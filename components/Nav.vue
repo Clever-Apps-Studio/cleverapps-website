@@ -67,7 +67,7 @@ const isHomePage = computed(() => {
             }"
             >Pricing</a
           >
-          <!-- <div class="font-text mr-10 cursor-pointer">Product</div> -->
+          <NuxtLink to="/popups/blogs" class="font-text mr-10 cursor-pointer">Blogs</NuxtLink>
           <div class="mr-10 cursor-pointer font-text">
             <Button type="normal" :color="invert ? 'light' : 'default'" rounded
               >Try it for free</Button
@@ -129,6 +129,11 @@ const isHomePage = computed(() => {
           href="#pricing"
           class="mr-10 cursor-pointer text-cleverBlack"
           >Pricing</a
+        >
+      </div>
+      <div class="font-text mr-10 cursor-pointer mb-3">
+        <NuxtLink class="text-cleverBlack" to="/popups/blogs"
+          >Blog</NuxtLink
         >
       </div>
       <div class="font-text mr-10 cursor-pointer mb-3">

@@ -3,7 +3,7 @@ import Footer from "@/components/sections/Footer.vue";
 </script>
 
 <template>
-  <div>
+  <div class="min-h-screen w-screen">
     <Nav />
     <slot />
     <Footer />

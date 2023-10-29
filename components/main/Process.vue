@@ -3,15 +3,15 @@ import Title from "./Title.vue";
 </script>
 
 <template>
-  <div class="p-20">
+  <div class="p-5 md:p-20">
     <Title text="Our Process" />
-    <div class="grid grid-cols-2 gap-5 mt-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-20">
       <div class="flex">
-        <div class="ml-auto">
-          <div class="font-text text-[25px] font-[600] text-right">
+        <div class="md:ml-auto">
+          <div class="font-text text-[25px] font-[600] text-center md:text-right">
             Tell us what you need: Your Project, Your Vision
           </div>
-          <div class="font-text text-[17px] mt-7 leading-8 text-right">
+          <div class="font-text text-[17px] mt-7 leading-8 text-center md:text-right">
             Your project's success begins with your input. At this stage, your
             vision is our compass, and your goals are our mission. We are here
             to listen, understand, and transform your ideas into a tangible
@@ -23,14 +23,14 @@ import Title from "./Title.vue";
         </div>
       </div>
     </div>
-    <div class="grid grid-cols-2 gap-5 mt-20">
+    <div class="grid grid-cols-1  md:grid-cols-2 gap-5 mt-20">
       <div class="flex"></div>
       <div class="flex">
         <div class="mr-auto">
-          <div class="font-text text-[25px] font-[600] text-left">
+          <div class="font-text text-[25px] font-[600] text-center md:text-left">
             Design Collaboration: Shaping Your Vision for an Exceptional UI/UX
           </div>
-          <div class="font-text text-[17px] mt-7 leading-8 text-left">
+          <div class="font-text text-[17px] mt-7 leading-8 text-center md:text-left">
             Crafting an outstanding user interface and user experience design
             begins with your vision. Please share your preferences, ideas, and
             any existing design assets to guide our creative process. By
@@ -43,13 +43,13 @@ import Title from "./Title.vue";
         </div>
       </div>
     </div>
-    <div class="grid grid-cols-2 gap-5 mt-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-20">
       <div class="flex">
-        <div class="ml-auto">
-          <div class="font-text text-[25px] font-[600] text-right">
+        <div class="md:ml-auto">
+          <div class="font-text text-[25px] font-[600] text-center md:text-right">
             Coding Commences: Transforming Vision into Reality
           </div>
-          <div class="font-text text-[17px] mt-7 leading-8 text-right">
+          <div class="font-text text-[17px] mt-7 leading-8 text-center md:text-right">
             This is where the magic happens. Our expert developers are hard at
             work, crafting the code that will bring your project to life. We'll
             keep you updated on our progress, maintain top-notch quality, and

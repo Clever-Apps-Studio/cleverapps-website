@@ -14,11 +14,11 @@ import figma from "../../assets/images/figma.png";
 
 <template>
   <div
-    class="flex flex-col items-center justify-center bg-black min-h-[300px] p-20"
+    class="flex flex-col items-center justify-center bg-black min-h-[300px] p-5 md:p-20"
   >
     <Title text="Tech Stack" />
-    <div class="w-[50%]">
-      <div class="grid grid-cols-4 gap-5 mt-20 text-white">
+    <div class="md:w-[50%]">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-20 text-white">
         <div class="flex flex-col items-center">
           <img class="w-[100px]" :src="typescript" />
           <div>Typescript</div>
@@ -36,7 +36,7 @@ import figma from "../../assets/images/figma.png";
           <div>Nuxt</div>
         </div>
       </div>
-      <div class="grid grid-cols-4 gap-5 mt-20 text-white">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-20 text-white">
         <div class="flex flex-col items-center">
           <img class="w-[100px]" :src="react" />
           <div>React Native</div>
@@ -54,7 +54,7 @@ import figma from "../../assets/images/figma.png";
           <div>MySql</div>
         </div>
       </div>
-      <div class="grid grid-cols-4 gap-5 mt-20 text-white">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-20 text-white">
         <div class="flex flex-col items-center">
           <img class="w-[100px]" :src="prisma" />
           <div>Prisma</div>

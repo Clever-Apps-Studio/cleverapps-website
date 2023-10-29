@@ -21,21 +21,21 @@ onMounted(() => {
 <template>
   <div
     id="particles-js"
-    class="flex items-center justify-center h-[550px] bg-[#0f0f0f]"
+    class="flex items-center justify-center text-center h-[550px] bg-[#0f0f0f]"
   >
     <div
       class="absolute mr-auto ml-auto right-0 left-0 h-auto bg-transparent flex flex-col items-center justify-center text-white"
     >
-      <div class="font-title font-[700] text-[50px]">
+      <div class="font-title font-[700] text-[20px] md:text-[50px]">
         Where
         <span class="text-[#ffbd02]">CLEVER apps</span> are built
       </div>
 
-      <div class="font-title font-[700] text-[20px]">
+      <div class="font-title font-[700] text-[16px] md:text-[20px]">
         We build apps for SaaS startups and Co-operations
       </div>
-      <div class="flex mt-10">
-        <div class="mr-4">
+      <div class="flex flex-col md:flex-row gap-5 justify-center items-center mt-10">
+        <div class="">
           <Button class="!px-10 py-7" type="normal" color="light">
             <div class="text-[20px] !font-text font-[500]">
               Let's talk
