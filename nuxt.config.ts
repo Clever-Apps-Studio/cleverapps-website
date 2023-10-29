@@ -1,11 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "@vueuse/motion/nuxt",
-    "@nuxt/content",
-  ],
+  modules: ["@nuxtjs/tailwindcss", "@vueuse/motion/nuxt", "@nuxt/content"],
   tailwindcss: {
     viewer: true,
   },
@@ -16,5 +12,11 @@ export default defineNuxtConfig({
   ],
   build: {
     transpile: ["primevue"],
+  },
+  experimental: {
+    /**
+     * see: https://v3.nuxtjs.org/api/configuration/nuxt.config#inlinessrstyles
+     */
+    inlineSSRStyles: false,
   },
 });
