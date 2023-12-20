@@ -67,9 +67,15 @@ const isHomePage = computed(() => {
             }"
             >Pricing</a
           >
-          <NuxtLink to="/popups/blogs" class="font-text mr-10 cursor-pointer">Blogs</NuxtLink>
+          <NuxtLink to="/popups/blogs" class="font-text mr-10 cursor-pointer"
+            >Blogs</NuxtLink
+          >
           <div class="mr-10 cursor-pointer font-text">
-            <Button type="normal" :color="invert ? 'light' : 'default'" rounded
+            <Button
+              to="https://apps.shopify.com/cleverpopups-production"
+              type="normal"
+              :color="invert ? 'light' : 'default'"
+              rounded
               >Try it for free</Button
             >
           </div>
@@ -99,7 +105,12 @@ const isHomePage = computed(() => {
           >
           <!-- <div class="font-text mr-10 cursor-pointer">Product</div> -->
           <div class="mr-10 cursor-pointer font-text">
-            <Button class="!px-5" type="normal" color="default" rounded
+            <Button
+              to="https://apps.shopify.com/cleverpopups-production"
+              class="!px-5"
+              type="normal"
+              color="default"
+              rounded
               >Try it for free</Button
             >
           </div>
@@ -132,9 +143,7 @@ const isHomePage = computed(() => {
         >
       </div>
       <div class="font-text mr-10 cursor-pointer mb-3">
-        <NuxtLink class="text-cleverBlack" to="/popups/blogs"
-          >Blog</NuxtLink
-        >
+        <NuxtLink class="text-cleverBlack" to="/popups/blogs">Blog</NuxtLink>
       </div>
       <div class="font-text mr-10 cursor-pointer mb-3">
         <NuxtLink class="text-cleverBlack" to="/popups/privacy"

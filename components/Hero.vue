@@ -8,6 +8,12 @@ import heroIcon1 from "@/assets/images/heroIcon1.png";
 import heroIcon2 from "@/assets/images/heroIcon2.png";
 import badge from "@/assets/images/shopifyBadgeWhite.png";
 import popup from "@/assets/images/popup.png";
+
+const goToShopify = () => {
+  navigateTo("https://apps.shopify.com/cleverpopups-production", {
+    external: true,
+  });
+};
 </script>
 
 <template>
@@ -28,7 +34,13 @@ import popup from "@/assets/images/popup.png";
       </div>
       <div class="flex justify-center lg:justify-start">
         <div class="w-[150px] mt-10">
-          <Button to="https://apps.shopify.com/cleverpopups-production" external class="h-[50px]" type="normal" color="default" rounded
+          <Button
+            to="https://apps.shopify.com/cleverpopups-production"
+            external
+            class="h-[50px]"
+            type="normal"
+            color="default"
+            rounded
             >Try it for free</Button
           >
         </div>
@@ -38,6 +50,7 @@ import popup from "@/assets/images/popup.png";
         class="flex flex-col lg:flex-row lg:justify-start justify-center items-center mt-32"
       >
         <div
+          @click="goToShopify"
           class="font-title font-[600] text-[16px] text-gray-500 mb-4 lg:w-[200px] lg:mb-0"
         >
           Trusted by Shopify merchants

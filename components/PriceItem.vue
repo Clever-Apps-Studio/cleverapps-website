@@ -71,7 +71,12 @@ const props = defineProps<{ item: IItem }>();
           </div>
           <div></div>
         </div>
-        <Button class="!w-[130px] mt-6 sm:mt-0"> Try it for free</Button>
+        <Button
+          to="https://apps.shopify.com/cleverpopups-production"
+          class="!w-[130px] mt-6 sm:mt-0"
+        >
+          Try it for free</Button
+        >
       </div>
     </div>
   </div>
