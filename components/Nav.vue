@@ -73,6 +73,7 @@ const isHomePage = computed(() => {
           <div class="mr-10 cursor-pointer font-text">
             <Button
               to="https://apps.shopify.com/cleverpopups-production"
+              external
               type="normal"
               :color="invert ? 'light' : 'default'"
               rounded
@@ -107,6 +108,7 @@ const isHomePage = computed(() => {
           <div class="mr-10 cursor-pointer font-text">
             <Button
               to="https://apps.shopify.com/cleverpopups-production"
+              external
               class="!px-5"
               type="normal"
               color="default"

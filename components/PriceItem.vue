@@ -73,6 +73,7 @@ const props = defineProps<{ item: IItem }>();
         </div>
         <Button
           to="https://apps.shopify.com/cleverpopups-production"
+          external
           class="!w-[130px] mt-6 sm:mt-0"
         >
           Try it for free</Button
