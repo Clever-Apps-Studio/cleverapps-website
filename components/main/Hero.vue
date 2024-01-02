@@ -45,11 +45,13 @@ const showModal = ref(false);
         class="flex flex-col md:flex-row gap-5 justify-center items-center mt-10"
       >
         <div class="animate__animated animate__fadeInBottomLeft">
-          <Button class="!px-10 py-7" type="normal" color="light">
-            <div
-              class="text-[20px] !font-text font-[500]"
-              @click="showModal = true"
-            >
+          <Button
+            class="!px-10 py-7"
+            type="normal"
+            color="light"
+            @click="showModal = true"
+          >
+            <div class="text-[20px] !font-text font-[500]">
               Let's talk
             </div></Button
           >
