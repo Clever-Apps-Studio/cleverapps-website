@@ -8,6 +8,8 @@ import Footer from "../components/main/Footer.vue";
 import Tech from "../components/main/Tech.vue";
 import Pricing from "../components/main/Pricing.vue";
 import Nav from "../components/main/Nav.vue";
+import Services from "~/components/main/Services.vue";
+import "animate.css";
 </script>
 
 <template>
@@ -20,6 +22,9 @@ import Nav from "../components/main/Nav.vue";
 
     <div id="howItWorks" class="mt-16">
       <Process />
+    </div>
+    <div id="services">
+      <Services />
     </div>
     <div id="techStack">
       <Tech />

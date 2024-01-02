@@ -1,17 +1,24 @@
 <script setup>
 import Title from "./Title.vue";
+import Idea from "@/assets/svg/idea.svg?component";
+import UX from "@/assets/svg/ux.svg?component";
+import Coding from "@/assets/svg/coding.svg?component";
 </script>
 
 <template>
   <div class="p-5 md:p-20">
     <Title text="Our Process" />
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-20">
-      <div class="flex">
+    <div class="grid grid-cols-1 items-center md:grid-cols-2 gap-5 mt-20">
+      <div class="flex order-2 md:order-1">
         <div class="md:ml-auto">
-          <div class="font-text text-[25px] font-[600] text-center md:text-right">
-            Tell us what you need: Your Project, Your Vision
+          <div
+            class="font-text text-[25px] font-[600] text-center md:text-right"
+          >
+            Tell us what you need: Your Vision, Your Idea
           </div>
-          <div class="font-text text-[17px] mt-7 leading-8 text-center md:text-right">
+          <div
+            class="font-text text-[17px] mt-7 leading-8 text-center md:text-right"
+          >
             Your project's success begins with your input. At this stage, your
             vision is our compass, and your goals are our mission. We are here
             to listen, understand, and transform your ideas into a tangible
@@ -22,15 +29,24 @@ import Title from "./Title.vue";
           </div>
         </div>
       </div>
+      <div class="flex justify-center h-[200px] md:h-[400px] order-1">
+        <Idea class="h-full" />
+      </div>
     </div>
-    <div class="grid grid-cols-1  md:grid-cols-2 gap-5 mt-20">
-      <div class="flex"></div>
+    <div class="grid grid-cols-1 items-center md:grid-cols-2 gap-5 mt-20">
+      <div class="flex justify-center h-[200px] md:h-[400px]">
+        <UX />
+      </div>
       <div class="flex">
         <div class="mr-auto">
-          <div class="font-text text-[25px] font-[600] text-center md:text-left">
+          <div
+            class="font-text text-[25px] font-[600] text-center md:text-left"
+          >
             Design Collaboration: Shaping Your Vision for an Exceptional UI/UX
           </div>
-          <div class="font-text text-[17px] mt-7 leading-8 text-center md:text-left">
+          <div
+            class="font-text text-[17px] mt-7 leading-8 text-center md:text-left"
+          >
             Crafting an outstanding user interface and user experience design
             begins with your vision. Please share your preferences, ideas, and
             any existing design assets to guide our creative process. By
@@ -43,13 +59,17 @@ import Title from "./Title.vue";
         </div>
       </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-20">
-      <div class="flex">
+    <div class="grid grid-cols-1 items-center md:grid-cols-2 gap-5 mt-20">
+      <div class="flex order-2 md:order-1">
         <div class="md:ml-auto">
-          <div class="font-text text-[25px] font-[600] text-center md:text-right">
+          <div
+            class="font-text text-[25px] font-[600] text-center md:text-right"
+          >
             Coding Commences: Transforming Vision into Reality
           </div>
-          <div class="font-text text-[17px] mt-7 leading-8 text-center md:text-right">
+          <div
+            class="font-text text-[17px] mt-7 leading-8 text-center md:text-right"
+          >
             This is where the magic happens. Our expert developers are hard at
             work, crafting the code that will bring your project to life. We'll
             keep you updated on our progress, maintain top-notch quality, and
@@ -60,6 +80,9 @@ import Title from "./Title.vue";
             >
           </div>
         </div>
+      </div>
+      <div class="flex justify-center h-[200px] md:h-[400px] order-1">
+        <Coding />
       </div>
     </div>
   </div>

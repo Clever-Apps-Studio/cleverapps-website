@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import ContactModal from "./ContactModal.vue";
 
 import RadioInput from "../common/RadioInput.vue";
 import GIcons from "../common/GIcons.vue";
@@ -14,7 +15,7 @@ interface IItem {
 }
 
 const period = ref("monthly");
-
+const showModal = ref(false);
 const props = defineProps<{ item: IItem }>();
 </script>
 
@@ -59,7 +60,10 @@ const props = defineProps<{ item: IItem }>();
       </div>
     </div>
     <div class="flex items-center justify-center border-t p-5">
-      <Button class="!w-[130px] mt-6 sm:mt-0"> Let's Talk</Button>
+      <Button class="!w-[130px] mt-6 sm:mt-0" @click="showModal = true">
+        Let's Talk</Button
+      >
+      <ContactModal v-model="showModal" />
     </div>
   </div>
 </template>

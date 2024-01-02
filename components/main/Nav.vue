@@ -3,10 +3,12 @@ import GIcons from "../common/GIcons.vue";
 import Button from "../common/Button.vue";
 import logo from "@/assets/images/main-logo.png";
 import logo2 from "@/assets/images/main-logo-2.png";
+import ContactModal from "./ContactModal.vue";
 
 const route = useRoute();
 
 const showSideBar = ref(false);
+const showModal = ref(false);
 onMounted(() => {
   window.addEventListener("scroll", () => {
     console.log(window.scrollY);
@@ -63,7 +65,13 @@ const isHomePage = computed(() => {
           <a href="#price" class="mr-10 cursor-pointer text-white">Pricing</a>
           <!-- <div class="font-text mr-10 cursor-pointer">Product</div> -->
           <div class="mr-10 cursor-pointer font-text">
-            <Button type="normal" color="light" rounded>Let's talk</Button>
+            <Button
+              type="normal"
+              color="light"
+              rounded
+              @click="showModal = true"
+              >Let's talk</Button
+            >
           </div>
         </div>
       </div>
@@ -79,8 +87,7 @@ const isHomePage = computed(() => {
             <div class="font-title text-[20px] font-[700] ml-3">CleverApps</div>
           </div>
         </NuxtLink>
-        <div class="flex ml-10 items-center text-albert">
-        </div>
+        <div class="flex ml-10 items-center text-albert"></div>
       </div>
 
       <div class="flex items-center">
@@ -89,7 +96,12 @@ const isHomePage = computed(() => {
           <a href="#techStack" class="mr-10 cursor-pointer">Tech stack</a>
           <a href="#price" class="mr-10 cursor-pointer">Pricing</a>
           <div class="mr-10 cursor-pointer font-text">
-            <Button class="!px-5" type="normal" color="default" rounded
+            <Button
+              class="!px-5"
+              type="normal"
+              color="default"
+              rounded
+              @click="showModal = true"
               >Let's talk</Button
             >
           </div>
@@ -97,7 +109,7 @@ const isHomePage = computed(() => {
       </div>
     </div>
   </div>
-  <div class=" items-center justify-between relative w-full hidden p-5">
+  <div class="items-center justify-between relative w-full hidden p-5">
     <div
       @click="showSideBar = !showSideBar"
       class="flex justify-between text-white"
@@ -128,6 +140,7 @@ const isHomePage = computed(() => {
         >
       </div>
     </PSidebar>
+    <ContactModal v-model="showModal" />
   </div>
 </template>
 

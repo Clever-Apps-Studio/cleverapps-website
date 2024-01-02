@@ -1,7 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import svgLoader from "vite-svg-loader";
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@vueuse/motion/nuxt", "@nuxt/content"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@vueuse/motion/nuxt",
+    "@nuxt/content",
+    "nuxt-icon",
+  ],
   tailwindcss: {
     viewer: true,
   },
@@ -18,5 +25,8 @@ export default defineNuxtConfig({
      * see: https://v3.nuxtjs.org/api/configuration/nuxt.config#inlinessrstyles
      */
     inlineSSRStyles: false,
+  },
+  vite: {
+    plugins: [svgLoader()],
   },
 });

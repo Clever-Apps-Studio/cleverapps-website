@@ -1,5 +1,6 @@
 <script setup>
 import Button from "../common/Button.vue";
+import ContactModal from "./ContactModal.vue";
 
 useHead({
   script: [
@@ -16,6 +17,8 @@ onMounted(() => {
     console.log("callback - particles.js config loaded");
   });
 });
+
+const showModal = ref(false);
 </script>
 
 <template>
@@ -26,31 +29,47 @@ onMounted(() => {
     <div
       class="absolute mr-auto ml-auto right-0 left-0 h-auto bg-transparent flex flex-col items-center justify-center text-white"
     >
-      <div class="font-title font-[700] text-[20px] md:text-[50px]">
+      <div
+        class="font-title font-[700] text-[20px] md:text-[50px] animate__animated animate__fadeInDown"
+      >
         Where
         <span class="text-[#ffbd02]">CLEVER apps</span> are built
       </div>
 
-      <div class="font-title font-[700] text-[16px] md:text-[20px]">
+      <div
+        class="font-title font-[700] text-[16px] md:text-[20px] animate__animated animate__fadeInDown"
+      >
         We build apps for SaaS startups and Co-operations
       </div>
-      <div class="flex flex-col md:flex-row gap-5 justify-center items-center mt-10">
-        <div class="">
+      <div
+        class="flex flex-col md:flex-row gap-5 justify-center items-center mt-10"
+      >
+        <div class="animate__animated animate__fadeInBottomLeft">
           <Button class="!px-10 py-7" type="normal" color="light">
-            <div class="text-[20px] !font-text font-[500]">
+            <div
+              class="text-[20px] !font-text font-[500]"
+              @click="showModal = true"
+            >
               Let's talk
             </div></Button
           >
         </div>
 
-        <div>
-          <Button class="!px-8 py-7 text-[20px]" type="outline" color="success">
-            <div class="text-[20px] !font-text font-[500]">
-              How it works
-            </div></Button
-          >
+        <div class="animate__animated animate__fadeInBottomRight">
+          <a href="#howItWorks">
+            <Button
+              class="!px-8 py-7 text-[20px]"
+              type="outline"
+              color="success"
+            >
+              <div class="text-[20px] !font-text font-[500]">
+                How it works
+              </div></Button
+            >
+          </a>
         </div>
       </div>
     </div>
+    <ContactModal v-model="showModal" />
   </div>
 </template>

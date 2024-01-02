@@ -4,7 +4,7 @@ import Title from "./Title.vue";
 const prices = [
   {
     name: "Starter",
-    amount: 50,
+    amount: 25,
     currency: "$",
     features: [
       "14-days risk-free trial!",
