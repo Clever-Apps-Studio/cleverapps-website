@@ -41,8 +41,9 @@ const options = ref([
   { label: "Mobile app", value: "mobile_app" },
   { label: "Web app", value: "web_app" },
   { label: "Desktop app", value: "desktop_app" },
-  { label: "Integration", value: "integration" },
-  { label: "API", value: "api" },
+  { label: "Third-party Integration", value: "third_party_integration" },
+  { label: "AI Integration", value: "ai_integration" },
+  { label: "API Development", value: "api" },
   { label: "IT Consulting", value: "it_consulting" },
 ]);
 
@@ -52,9 +53,10 @@ const handleSend = async () => {
     v$.value.$validate();
 
     console.log("sdfdf", v$.value.$error);
-    // if (v$.value.$error) {
-    //   return;
-    // }
+    if (v$.value.$error) {
+      loading.value = false;
+      return;
+    }
 
     const payload = {
       fullname: form.full_name,
