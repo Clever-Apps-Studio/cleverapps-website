@@ -76,7 +76,7 @@ import Coding from "@/assets/svg/coding.svg?component";
             ensure timely delivery. Your project is in capable hands as we turn
             your vision into reality.
             <span class="font-bold"
-              >The initial minimum viable product (MVP) will be ready in 60 days.</span
+              >The initial Minimum Viable Product (MVP) will be ready in 60 days.</span
             >
           </div>
         </div>
