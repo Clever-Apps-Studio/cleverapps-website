@@ -40,7 +40,7 @@ const isHomePage = computed(() => {
       class="absolute flex justify-between top-0 left-0 right-0 z-20 text-cleverBlack py-5"
     >
       <div class="flex items-center pl-10">
-        <NuxtLink to="/popups">
+        <NuxtLink to="/">
           <div class="flex items-center">
             <img class="w-[50px]" :src="logo" />
             <div class="font-title text-[20px] font-[700] ml-3 text-white">
@@ -63,6 +63,9 @@ const isHomePage = computed(() => {
             >Tech stack</a
           >
           <a href="#price" class="mr-10 cursor-pointer text-white">Pricing</a>
+          <NuxtLink href="/academy" class="mr-10 cursor-pointer text-white"
+            >Academy</NuxtLink
+          >
           <!-- <div class="font-text mr-10 cursor-pointer">Product</div> -->
           <div class="mr-10 cursor-pointer font-text">
             <Button
@@ -95,6 +98,9 @@ const isHomePage = computed(() => {
           <a href="#howItWorks" class="mr-10 cursor-pointer">How it works</a>
           <a href="#techStack" class="mr-10 cursor-pointer">Tech stack</a>
           <a href="#price" class="mr-10 cursor-pointer">Pricing</a>
+          <NuxtLink href="/academy" class="mr-10 cursor-pointer text-black"
+            >Academy</NuxtLink
+          >
           <div class="mr-10 cursor-pointer font-text">
             <Button
               class="!px-5"
