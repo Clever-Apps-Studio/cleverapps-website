@@ -10,6 +10,7 @@ import mongo from "../../assets/images/mongo.png";
 import prisma from "../../assets/images/prisma.png";
 import mysql from "../../assets/images/mysql.png";
 import figma from "../../assets/images/figma.png";
+import GPT from "../../assets/svg/gpt.svg?component";
 </script>
 
 <template>
@@ -58,6 +59,11 @@ import figma from "../../assets/images/figma.png";
         <div class="flex flex-col items-center">
           <img class="w-[100px]" :src="prisma" />
           <div>Prisma</div>
+        </div>
+        
+        <div class="flex flex-col items-center justify-center">
+          <GPT  />
+          <!-- <div>Private GPT</div> -->
         </div>
         <div class="flex flex-col items-center">
           <img class="w-[100px]" :src="figma" />
