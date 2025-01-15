@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import Button from "../common/Button.vue";
 import logo from "@/assets/images/main-logo.png";
+
+const year = new Date().getFullYear();
 </script>
 
 <template>
@@ -34,7 +36,7 @@ import logo from "@/assets/images/main-logo.png";
     <div
       class="flex flex-col order-2 lg:order-1 text-center lg:flex-row justify-between font-text text-gray-200 text-[12px] py-3 border-t border-t-gray-600 mt-10"
     >
-      <div>Created by CleverApps | All rights reserved © 2023</div>
+      <div>Created by CleverApps | All rights reserved © {{ year }}</div>
       <div class="text-white order-1 lg:order-2">
         <NuxtLink class="text-white" to="/popups/privacy"
           >Privacy Policy</NuxtLink
