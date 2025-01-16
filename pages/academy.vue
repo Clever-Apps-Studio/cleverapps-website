@@ -8,6 +8,11 @@ import Button from "../components/common/Button.vue";
 import GIcons from "../components/common/GIcons.vue";
 import JoinCohort from "../components/main/JoinCohortModal.vue";
 
+import WebI from '../assets/svg/web.svg?component';
+import MobileI from '../assets/svg/mobile.svg?component';
+import DesignI from '../assets/svg/design.svg?component';
+import DataI from '../assets/svg/data.svg?component';
+
 import "animate.css";
 
 const currentTraining: any = ref(null);
@@ -57,20 +62,30 @@ const trainings = [
     value: "data_science_training"
   },
 ];
+
+const illustrations: any = {
+  web_app_dev: WebI,
+  mobile_app_dev: MobileI,
+  ui_ux_training: DesignI,
+  data_science_training: DataI
+}
 </script>
 
 <template>
   <div class="flex flex-col h-full">
     <Nav />
     <PageHeader title="Academy" subtitle="CleverApps Academy" />
+    
     <div class="flex items-center justify-center p-5 md:p-20">
-      <div class="flex flex-col gap-20 w-full md:w-1/2">
+      <div class="flex flex-col gap-40 w-full md:w-[70%] h-full">
         <div
-          class="flex items-center"
+          class="flex items-center gap-20"
           v-for="(training, idx) in trainings"
           :key="idx"
         >
-          <div></div>
+          <div class="h-full min-w-[40%] ">
+            <component :is="illustrations[training.value]" class="w-full h-full" />
+          </div>
           <div>
             <p class="text-2xl font-bold font-title">{{ training.name }}</p>
             <div class="flex items-center mt-2 gap-3">
