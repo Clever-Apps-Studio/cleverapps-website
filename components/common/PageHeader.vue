@@ -12,10 +12,11 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex items-center justify-center h-[500px] bg-[#0f0f0f]">
+  <div class="flex flex-col items-center justify-center h-[500px] bg-[#0f0f0f] relative">
     <div class="flex flex-col items-center justify-center text-white">
       <p class="font-title text-[40px] font-bold">{{ title }}</p>
       <p>{{ subtitle }}</p>
     </div>
+    <slot/>
   </div>
 </template>

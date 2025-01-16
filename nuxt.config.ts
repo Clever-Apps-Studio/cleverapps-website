@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@vueuse/motion/nuxt",
     "@nuxt/content",
     "nuxt-icon",
+    "nuxt-marquee",
   ],
   tailwindcss: {
     viewer: true,

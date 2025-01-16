@@ -13,6 +13,19 @@ import MobileI from '../assets/svg/mobile.svg?component';
 import DesignI from '../assets/svg/design.svg?component';
 import DataI from '../assets/svg/data.svg?component';
 
+import react from "../../assets/images/react-logo.png";
+import node from "../../assets/images/node.png";
+import js from "../../assets/images/js.png";
+import vue from "../../assets/images/vue.png";
+import typescript from "../../assets/images/typescript.png";
+import nuxt from "../../assets/images/nuxt.png";
+import mongo from "../../assets/images/mongo.png";
+import prisma from "../../assets/images/prisma.png";
+import mysql from "../../assets/images/mysql.png";
+import figma from "../../assets/images/figma.png";
+import python from "../../assets/images/python.png";
+import GPT from "../../assets/svg/gpt.svg?component";
+
 import "animate.css";
 
 const currentTraining: any = ref(null);
@@ -69,12 +82,32 @@ const illustrations: any = {
   ui_ux_training: DesignI,
   data_science_training: DataI
 }
+
+const logos = [
+  react,
+  node,
+  python,
+  js,
+  vue,
+  typescript,
+  nuxt,
+  mongo,
+  prisma,
+  mysql,
+  figma
+]
 </script>
 
 <template>
   <div class="flex flex-col h-full">
     <Nav />
-    <PageHeader title="Academy" subtitle="CleverApps Academy" />
+    <PageHeader title="Academy" subtitle="CleverApps Academy" >
+     <div class="absolute bottom-0 w-full">
+       <NuxtMarquee autoFill class="flex items-center !gap-10">
+          <img v-for="(logo, idx) in logos" :key="idx" :src="logo" class="h-24 mx-8" />
+      </NuxtMarquee>
+     </div>
+    </PageHeader>
     
     <div class="flex items-center justify-center p-5 md:p-20">
       <div class="flex flex-col gap-40 w-full md:w-[70%] h-full">

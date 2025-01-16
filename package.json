@@ -15,7 +15,8 @@
     "@types/node": "^18",
     "nuxt": "^3.8.0",
     "nuxt-aos": "^1.2.1",
-    "nuxt-icon": "^0.6.8"
+    "nuxt-icon": "^0.6.8",
+    "nuxt-marquee": "1.0.4"
   },
   "dependencies": {
     "@vuelidate/core": "^2.0.3",
