@@ -25,6 +25,7 @@ import mysql from "../../assets/images/mysql.png";
 import figma from "../../assets/images/figma.png";
 import python from "../../assets/images/python.png";
 import GPT from "../../assets/svg/gpt.svg?component";
+import Excel from "../../assets/svg/excel.svg?component";
 
 import "animate.css";
 
@@ -74,13 +75,23 @@ const trainings = [
       modules: ["Data Cleaning", "Python", "Predictive Analysis", "R"],
     value: "data_science_training"
   },
+  {
+    name: "Excel Training",
+    start_date: "2025-02-01",
+    end_date: "2022-03-30",
+    description:
+      "Master the art of data analysis and visualization using Excel. Learn to create pivot tables, charts, and automate tasks with VBA.",
+      modules: ["Data Cleaning", "Pivot Tables", "VBA", "Charts"],
+    value: "excel_training"
+  }
 ];
 
 const illustrations: any = {
   web_app_dev: WebI,
   mobile_app_dev: MobileI,
   ui_ux_training: DesignI,
-  data_science_training: DataI
+  data_science_training: DataI,
+  excel_training: Excel
 }
 
 const logos = [
