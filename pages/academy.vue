@@ -112,16 +112,16 @@ const logos = [
     <div class="flex items-center justify-center p-5 md:p-20">
       <div class="flex flex-col gap-40 w-full md:w-[70%] h-full">
         <div
-          class="flex items-center gap-20"
+          class="flex flex-col md:flex-row items-center gap-20"
           v-for="(training, idx) in trainings"
           :key="idx"
         >
           <div class="h-full min-w-[40%] ">
             <component :is="illustrations[training.value]" class="w-full h-full" />
           </div>
-          <div>
+          <div class="text-center md:text-left">
             <p class="text-2xl font-bold font-title">{{ training.name }}</p>
-            <div class="flex items-center mt-2 gap-3">
+            <div class="flex items-center mt-2 gap-3 text-left">
               <GIcons name="event" class="text-cleverBlack" />
               <p class="text-xl font-bold font-title">
                 {{ dayjs(training.start_date).format("MMMM D, YYYY") }} -
@@ -129,7 +129,7 @@ const logos = [
               </p>
             </div>
             <p class="text-lg font-text mt-4">{{ training.description }}</p>
-            <ul class="mt-4 font-text text-lg">
+            <ul class="mt-4 font-text text-lg text-left">
               <li class="mb-2" v-for="(item, idx) in training.modules">
                 {{ idx + 1 }}. {{ item }}
               </li>
