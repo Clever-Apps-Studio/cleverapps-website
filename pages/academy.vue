@@ -229,12 +229,12 @@ const tutors = [
               </p>
             </div>
             <div v-if="!training.soon">
-              <div class="flex gap-2 mt-2">
+              <div class="flex justify-center md:justify-start flex-wrap gap-2 mt-2">
               <p class="underline font-medium">In-Person Days:</p>
               <p v-for="day in training.offline_days">{{ day }},</p>
               <p class="font-semibold">{{ training.offline_time }}</p>
             </div>
-             <div class="flex gap-2 mt-2">
+             <div class="flex justify-center md:justify-start gap-2 mt-2">
               <p class="underline font-medium">Online Days:</p>
               <p v-for="day in training.online_days">{{ day }},</p>
               <p class="font-semibold">{{ training.online_time }}</p>
