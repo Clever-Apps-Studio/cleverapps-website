@@ -3,7 +3,7 @@ import Footer from "../components/main/Footer.vue";
 import Nav from "../components/main/Nav.vue";
 import PageHeader from "../components/common/PageHeader.vue";
 import dayjs from "dayjs";
-import duration from 'dayjs/plugin/duration'
+import duration from "dayjs/plugin/duration";
 
 import Button from "../components/common/Button.vue";
 import GIcons from "../components/common/GIcons.vue";
@@ -35,7 +35,7 @@ import { getDuration } from "~/utils/functions";
 
 import "animate.css";
 
-dayjs.extend(duration)
+dayjs.extend(duration);
 
 const currentTraining: any = ref(null);
 const showModal = ref(false);
@@ -59,7 +59,11 @@ const trainings = [
     ],
     value: "web_app_dev",
     soon: false,
-    amount: "₵900"
+    amount: "₵1,000",
+    location: {
+      name: "Ennovate BLCK",
+      link: "https://maps.app.goo.gl/SvJHcQVuebqpNU4MA",
+    },
   },
   {
     name: "Mobile Development Training",
@@ -74,7 +78,7 @@ const trainings = [
     modules: ["React-Native", "Firebase", "Deployment"],
     value: "mobile_app_dev",
     soon: false,
-    amount: "₵700"
+    amount: "₵700",
   },
 
   {
@@ -184,8 +188,6 @@ const tutors = [
     ],
   },
 ];
-
-
 </script>
 
 <template>
@@ -203,6 +205,20 @@ const tutors = [
         </NuxtMarquee>
       </div>
     </PageHeader>
+    <div
+      class="text-xl md:text-2xl p-2 flex text-center justify-center items-center bg-cleverYellow"
+    >
+      
+      <div>
+        <a
+          href="https://maps.app.goo.gl/SvJHcQVuebqpNU4MA"
+          target="_blank"
+          class="underline font-bold"
+          ><p><span><Icon class="!inline" name="ion:ios-location" size="40" /></span>Ennovate BLCK - Innovation Hub - Adenta</p></a
+        >
+        <p class="text-sm">Click here to get directions</p>
+      </div>
+    </div>
 
     <div class="flex items-center justify-center p-5 md:p-20">
       <div class="flex flex-col gap-40 w-full md:w-[70%] h-full">
@@ -227,29 +243,38 @@ const tutors = [
               <p class="md:text-xl font-bold font-title">
                 {{ dayjs(training.start_date).format("MMMM D, YYYY") }} -
                 {{ dayjs(training.end_date).format("MMMM D, YYYY") }}
-                <span>({{ getDuration(training.start_date, training.end_date).months }} months)</span>
+                <span
+                  >({{
+                    getDuration(training.start_date, training.end_date).months
+                  }}
+                  months)</span
+                >
               </p>
             </div>
             <div v-if="!training.soon">
-              <div class="flex justify-center md:justify-start flex-wrap gap-2 mt-2">
-              <p class="underline font-medium">In-Person Days:</p>
-              <p v-for="day in training.offline_days">{{ day }},</p>
-              <p class="font-semibold">{{ training.offline_time }}</p>
+              <div
+                class="flex justify-center md:justify-start flex-wrap gap-2 mt-2"
+              >
+                <p class="underline font-medium">In-Person Days:</p>
+                <p v-for="day in training.offline_days">{{ day }},</p>
+                <p class="font-semibold">{{ training.offline_time }}</p>
+              </div>
+              <div class="flex justify-center md:justify-start gap-2 mt-2">
+                <p class="underline font-medium">Online Days:</p>
+                <p v-for="day in training.online_days">{{ day }},</p>
+                <p class="font-semibold">{{ training.online_time }}</p>
+              </div>
             </div>
-             <div class="flex justify-center md:justify-start gap-2 mt-2">
-              <p class="underline font-medium">Online Days:</p>
-              <p v-for="day in training.online_days">{{ day }},</p>
-              <p class="font-semibold">{{ training.online_time }}</p>
-            </div>
-            </div>
-            <p class="text-lg font-text mt-4 text-left">{{ training.description }}</p>
+            <p class="text-lg font-text mt-4 text-left">
+              {{ training.description }}
+            </p>
             <ul class="mt-4 font-text text-lg text-left">
               <li class="mb-2" v-for="(item, idx) in training.modules">
                 {{ idx + 1 }}. {{ item }}
               </li>
             </ul>
             <div class="mt-4" v-if="training.amount">
-              <p class="text-xl  font-bold">{{ training.amount }}/month</p>
+              <p class="text-xl font-bold">{{ training.amount }}/month</p>
             </div>
             <div class="w-full md:w-1/2">
               <Button
