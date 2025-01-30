@@ -3,6 +3,7 @@ import Footer from "../components/main/Footer.vue";
 import Nav from "../components/main/Nav.vue";
 import PageHeader from "../components/common/PageHeader.vue";
 import dayjs from "dayjs";
+import duration from 'dayjs/plugin/duration'
 
 import Button from "../components/common/Button.vue";
 import GIcons from "../components/common/GIcons.vue";
@@ -28,9 +29,13 @@ import figma from "../../assets/images/figma.png";
 import python from "../../assets/images/python.png";
 import GPT from "../../assets/svg/gpt.svg?component";
 import Excel from "../../assets/svg/excel.svg?component";
-import Arduino from "../../assets/svg/arduino.svg?component"
+import Arduino from "../../assets/svg/arduino.svg?component";
+
+import { getDuration } from "~/utils/functions";
 
 import "animate.css";
+
+dayjs.extend(duration)
 
 const currentTraining: any = ref(null);
 const showModal = ref(false);
@@ -39,7 +44,11 @@ const trainings = [
   {
     name: "Web Development Training",
     start_date: "2025-03-01",
-    end_date: "2022-07-30",
+    end_date: "2025-08-1",
+    offline_time: "6pm - 9pm",
+    online_time: "1pm - 4pm",
+    offline_days: ["Monday", "Wednesday"],
+    online_days: ["Sunday"],
     description:
       "Learn to build responsive and dynamic websites using modern tools and technologies like HTML, CSS, JavaScript, and frameworks.",
     modules: [
@@ -54,7 +63,11 @@ const trainings = [
   {
     name: "Mobile Development Training",
     start_date: "2025-03-01",
-    end_date: "2022-07-30",
+    end_date: "2025-08-01",
+    offline_time: "6pm - 9pm",
+    online_time: "4:30pm - 7:30pm",
+    offline_days: ["Tuesday", "Thursday"],
+    online_days: ["Sunday"],
     description:
       "Master the skills to create engaging and functional mobile apps for Android and iOS using platforms like React Native or Flutter.",
     modules: ["React-Native", "Firebase", "Deployment"],
@@ -78,7 +91,12 @@ const trainings = [
     end_date: "",
     description:
       "Develop skills in data analysis, visualization, and machine learning with Python, R, and real-world datasets to solve complex problems.",
-    modules: ["Data Cleaning", "Python", "Predictive Analysis", "Data extraction with AI"],
+    modules: [
+      "Data Cleaning",
+      "Python",
+      "Predictive Analysis",
+      "Data extraction with AI",
+    ],
     value: "data_science_training",
     soon: true,
   },
@@ -98,7 +116,13 @@ const trainings = [
     end_date: "",
     description:
       "This beginner-friendly Arduino course covers the basics of microcontrollers, programming, and electronics. Students will learn to set up Arduino, work with sensors, and build simple projects, gaining hands-on experience in embedded systems.",
-    modules: ["Introduction to electronics", "Basic Arduino Programming", "Introduction to Arduino and Embedded Systems", "Working with Sensors and Actuators", "Building Real-World Projects"],
+    modules: [
+      "Introduction to electronics",
+      "Basic Arduino Programming",
+      "Introduction to Arduino and Embedded Systems",
+      "Working with Sensors and Actuators",
+      "Building Real-World Projects",
+    ],
     value: "arduino",
     soon: true,
   },
@@ -110,7 +134,7 @@ const illustrations: any = {
   ui_ux_training: DesignI,
   data_science_training: DataI,
   excel_training: Excel,
-  arduino: Arduino
+  arduino: Arduino,
 };
 
 const logos = [
@@ -133,27 +157,33 @@ const tutors = [
     image: "/tutors/ben.png",
     role: "Senior Fullstack Developer",
     company: "64Robots",
-    company_website: 'https://www.64robots.com/',
+    company_website: "https://www.64robots.com/",
     description: `Ben Kissi is an experienced full-stack developer with six years of hands-on expertise in web and mobile development. He studied Software Development in a 2 year programme at the Meltwater Entrepreneurial School of Technology (MEST). He alongside Hambau Abdulai Yaya and Samuel Amoah, won the 
     MEST-Vodafone Hackathon with <a class="underline font-medium" target="_blank" href="https://www.myjoyonline.com/tech-anti-drugs-counterfeit-app-tops-maiden-mest-vodafone-hackathon/">an anti-drug counterfeit app</a>. After MEST, he led the startup team at AdGeek, successfully raising $50,000 before the
     company was acquired by Kudobuzz in 2018. <br> Currently, he works as a full-stack developer at 64Robots, a US-based software agency, and is the co-founder and CEO of CleverApps, a Ghanaian software development and technology agency. His skills span web development, mobile development, and Arduino, making him a well-rounded tutor for aspiring developers.`,
-    courses: ['Web Development Training', 'Mobile Development Training', 'Arduino Training'],
+    courses: [
+      "Web Development Training",
+      "Mobile Development Training",
+      "Arduino Training",
+    ],
     links: [
       {
-        label: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/benkissi/'
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/in/benkissi/",
       },
       {
-        label: 'Github',
-        url: 'https://github.com/benkissi'
+        label: "Github",
+        url: "https://github.com/benkissi",
       },
       {
-        label: 'Website',
-        url: 'https://benkissi.com/'
-      }
-    ]
-  }
-]
+        label: "Website",
+        url: "https://benkissi.com/",
+      },
+    ],
+  },
+];
+
+
 </script>
 
 <template>
@@ -187,12 +217,28 @@ const tutors = [
           </div>
           <div class="text-center md:text-left">
             <p class="text-2xl font-bold font-title">{{ training.name }}</p>
-            <div  v-if="training.start_date" class="flex items-center justify-center md:justify-start mt-2 gap-3 text-left">
+            <div
+              v-if="training.start_date"
+              class="flex items-center justify-center md:justify-start mt-2 gap-3 text-left"
+            >
               <GIcons name="event" class="text-cleverBlack" />
               <p class="md:text-xl font-bold font-title">
                 {{ dayjs(training.start_date).format("MMMM D, YYYY") }} -
                 {{ dayjs(training.end_date).format("MMMM D, YYYY") }}
+                <span>({{ getDuration(training.start_date, training.end_date).months }} months)</span>
               </p>
+            </div>
+            <div v-if="!training.soon">
+              <div class="flex gap-2 mt-2">
+              <p class="underline font-medium">In-Person Days:</p>
+              <p v-for="day in training.offline_days">{{ day }},</p>
+              <p class="font-semibold">{{ training.offline_time }}</p>
+            </div>
+             <div class="flex gap-2 mt-2">
+              <p class="underline font-medium">Online Days:</p>
+              <p v-for="day in training.online_days">{{ day }},</p>
+              <p class="font-semibold">{{ training.online_time }}</p>
+            </div>
             </div>
             <p class="text-lg font-text mt-4">{{ training.description }}</p>
             <ul class="mt-4 font-text text-lg text-left">
@@ -212,10 +258,16 @@ const tutors = [
                 class="mt-5"
                 >{{ training.soon ? "Coming Soon" : "Enroll Now" }}</Button
               >
-              <p v-if="!training.soon" class="text-sm text-gray-400 mt-2 text-center">
+              <p
+                v-if="!training.soon"
+                class="text-sm text-gray-400 mt-2 text-center"
+              >
                 Limited seats available
               </p>
-               <p v-if="training.soon" class="text-sm text-gray-400 mt-2 text-center">
+              <p
+                v-if="training.soon"
+                class="text-sm text-gray-400 mt-2 text-center"
+              >
                 Join waiting list
               </p>
             </div>
@@ -224,13 +276,15 @@ const tutors = [
       </div>
     </div>
     <div class="mt-10 p-4 mx-0 md:mx-20 mb-20">
-       <Title text="Tutors" class="mb-10" />
-       <Tutor v-for="(tutor, idx) in tutors" :key="idx" :tutor="tutor"/>
+      <Title text="Tutors" class="mb-10" />
+      <Tutor v-for="(tutor, idx) in tutors" :key="idx" :tutor="tutor" />
     </div>
     <JoinCohort v-model="showModal" :training="currentTraining" />
-    <div class="flex flex-col gap-4 bg-slate-200 justify-center items-center p-10">
-      <p class="text-xl md:text-4xl font-bold"> For further information call</p>
-      <p class="text-xl md:text-4xl font-bold"> +233 249 4141 93</p>
+    <div
+      class="flex flex-col gap-4 bg-slate-200 justify-center items-center p-10"
+    >
+      <p class="text-xl md:text-4xl font-bold">For further information call</p>
+      <p class="text-xl md:text-4xl font-bold">+233 249 4141 93</p>
     </div>
     <div class="mt-auto">
       <Footer />
