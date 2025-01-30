@@ -56,13 +56,13 @@ const isHomePage = computed(() => {
 
       <div class="flex items-center">
         <div class="flex items-center font-albert">
-          <a href="#howItWorks" class="mr-10 cursor-pointer text-white"
+          <a href="/#howItWorks" class="mr-10 cursor-pointer text-white"
             >How it works</a
           >
-          <a href="#techStack" class="mr-10 cursor-pointer text-white"
+          <a href="/#techStack" class="mr-10 cursor-pointer text-white"
             >Tech stack</a
           >
-          <a href="#price" class="mr-10 cursor-pointer text-white">Pricing</a>
+          <a href="/#price" class="mr-10 cursor-pointer text-white">Pricing</a>
           <NuxtLink href="/academy" class="mr-10 cursor-pointer text-white"
             >Academy</NuxtLink
           >
@@ -95,9 +95,9 @@ const isHomePage = computed(() => {
 
       <div class="flex items-center">
         <div class="flex items-center font-albert">
-          <a href="#howItWorks" class="mr-10 cursor-pointer">How it works</a>
-          <a href="#techStack" class="mr-10 cursor-pointer">Tech stack</a>
-          <a href="#price" class="mr-10 cursor-pointer">Pricing</a>
+          <a href="/#howItWorks" class="mr-10 cursor-pointer">How it works</a>
+          <a href="/#techStack" class="mr-10 cursor-pointer">Tech stack</a>
+          <a href="/#price" class="mr-10 cursor-pointer">Pricing</a>
           <NuxtLink href="/academy" class="mr-10 cursor-pointer text-black"
             >Academy</NuxtLink
           >
@@ -115,7 +115,9 @@ const isHomePage = computed(() => {
       </div>
     </div>
   </div>
-  <div class="items-center justify-between relative w-full hidden p-5">
+  <div
+    class="flex fixed bg-white left-0 z-20 items-center justify-between w-full sm:hidden p-5"
+  >
     <div
       @click="showSideBar = !showSideBar"
       class="flex justify-between text-white"
@@ -123,27 +125,42 @@ const isHomePage = computed(() => {
       <GIcons name="menu" class="text-cleverBlack" />
     </div>
 
-    <NuxtLink to="/popups" class="">
+    <NuxtLink to="/" class="">
       <div class="flex items-center">
         <img class="w-[50px] hidden md:block" :src="logo" />
         <img class="w-[50px] md:hidden" :src="logo2" />
-        <div class="font-title text-[16px] font-[700] ml-2">CleverPopups</div>
+        <div class="font-title text-[16px] font-[700] ml-2">CleverApps</div>
       </div>
     </NuxtLink>
 
-    <PSidebar v-model:visible="showSideBar">
-      <div class="font-text mr-10 cursor-pointer mb-3">
-        <a
-          v-if="isHomePage"
-          href="#pricing"
-          class="mr-10 cursor-pointer text-cleverBlack"
-          >Pricing</a
+    <PSidebar v-model:visible="showSideBar" class="flex flex-col">
+      <div class="flex flex-col gap-8 font-albert flex-1">
+        <a @click="showSideBar = false" href="/#howItWorks" class="mr-10 cursor-pointer">How it works</a>
+        <a @click="showSideBar = false" href="/#techStack" class="mr-10 cursor-pointer">Tech stack</a>
+        <a @click="showSideBar = false" href="/#price" class="mr-10 cursor-pointer">Pricing</a>
+        <NuxtLink href="/academy" class="mr-10 cursor-pointer text-black"
+          >Academy</NuxtLink
         >
-      </div>
-      <div class="font-text mr-10 cursor-pointer mb-3">
-        <NuxtLink class="text-cleverBlack" to="/popups/privacy"
-          >Privacy Policy</NuxtLink
-        >
+        <div @click="showSideBar = false" class="font-text mr-10 cursor-pointer mt-auto">
+          <NuxtLink class="text-cleverBlack" to="/popups/privacy"
+            >Privacy Policy</NuxtLink
+          >
+        </div>
+
+        <div class="mr-10 cursor-pointer font-text">
+          <Button
+            class="!px-5"
+            type="normal"
+            color="default"
+            rounded
+            @click="() => {
+              showSideBar = false
+              showModal = true
+            }
+            "
+            >Let's talk</Button
+          >
+        </div>
       </div>
     </PSidebar>
     <ContactModal v-model="showModal" />

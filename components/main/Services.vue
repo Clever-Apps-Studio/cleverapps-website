@@ -5,7 +5,7 @@ import Title from "./Title.vue";
 <template>
   <div class="p-5 md:p-20">
     <Title text="Our Services" />
-    <div class="grid grid-cols-1 items-center md:grid-cols-3 gap-8 mt-20">
+    <div class="grid grid-cols-1 items-center md:grid-cols-3 gap-8 mt-20 text-center">
       <div
         class="flex flex-col items-center justify-center p-4 bg-gradient-to-t from-teal-500/50 to-white h-[200px] rounded-2xl cursor-pointer hover:scale-105 transition-all duration-300"
       >

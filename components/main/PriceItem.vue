@@ -12,11 +12,17 @@ interface IItem {
   month: number;
   currency: string;
   features: string[];
+  hideAmount?: boolean;
+}
+
+interface IProps {
+  item: IItem;
+  hideAmount?: boolean;
 }
 
 const period = ref("monthly");
 const showModal = ref(false);
-const props = defineProps<{ item: IItem }>();
+const props = defineProps<IProps>();
 </script>
 
 <template>
@@ -35,7 +41,7 @@ const props = defineProps<{ item: IItem }>();
         </div>
       </div>
 
-      <div class="flex flex-col items-center mt-5">
+      <div v-if="!hideAmount" class="flex flex-col items-center mt-5">
         <div class="flex">
           <div class="text-[16px]">{{ item.currency }}</div>
           <div class="font-title text-[25px] font-bold self-end leading-3">

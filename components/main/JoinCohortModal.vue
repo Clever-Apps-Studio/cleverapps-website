@@ -21,7 +21,8 @@ const form: any = reactive({
   full_name: "",
   email: "",
   phone: "",
-  class: []
+  class: [],
+  waitingList: false,
 });
 
 const rules = {
@@ -56,6 +57,7 @@ const handleSend = async () => {
       email: form.email,
       phone: form.phone,
       class: form.class,
+      waitingList: form.waitingList
     };
 
     const url = `https://script.google.com/macros/s/AKfycbzFSdQ-g2t7PFEhpivFsi4IzXafl59hrAS2lELsKCrKGJ0Uuk6tMnudnK-_rH8gguCI/exec`;
@@ -92,6 +94,7 @@ const handleClose = () => {
 watchEffect(() => {
   if(props.training) {
     form.class = [props.training.value];
+    form.waitingList = props.training.soon
   }
 })
 </script>

@@ -1,6 +1,8 @@
 <script setup>
 import PriceItem from "./PriceItem.vue";
 import Title from "./Title.vue";
+
+const { location } = await useLocation();
 const prices = [
   {
     name: "Starter",
@@ -14,11 +16,23 @@ const prices = [
     ],
   },
 ];
+
+const hideAmount = computed(() => {
+  if (location.value) {
+    return location.value.country === 'GH'
+  }
+  return false;
+})
+
+watchEffect(() => {
+  console.log("location", location);
+})
 </script>
 
 <template>
   <div class="flex flex-col items-center p-5 md:p-20">
+  
     <Title text="Pricing" class="mb-10" />
-    <PriceItem v-for="item in prices" :item="item" />
+    <PriceItem :hideAmount="hideAmount" v-for="item in prices" :item="item" />
   </div>
 </template>
