@@ -59,6 +59,7 @@ const trainings = [
     ],
     value: "web_app_dev",
     soon: false,
+    amount: "₵900"
   },
   {
     name: "Mobile Development Training",
@@ -73,6 +74,7 @@ const trainings = [
     modules: ["React-Native", "Firebase", "Deployment"],
     value: "mobile_app_dev",
     soon: false,
+    amount: "₵700"
   },
 
   {
@@ -240,12 +242,15 @@ const tutors = [
               <p class="font-semibold">{{ training.online_time }}</p>
             </div>
             </div>
-            <p class="text-lg font-text mt-4">{{ training.description }}</p>
+            <p class="text-lg font-text mt-4 text-left">{{ training.description }}</p>
             <ul class="mt-4 font-text text-lg text-left">
               <li class="mb-2" v-for="(item, idx) in training.modules">
                 {{ idx + 1 }}. {{ item }}
               </li>
             </ul>
+            <div class="mt-4" v-if="training.amount">
+              <p class="text-xl  font-bold">{{ training.amount }}/month</p>
+            </div>
             <div class="w-full md:w-1/2">
               <Button
                 @click="
