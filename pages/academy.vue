@@ -267,7 +267,7 @@ const tutors = [
                 v-if="!training.soon"
                 class="text-sm text-gray-400 mt-2 text-center"
               >
-                Limited seats available
+                Limited seats available (30 seats)
               </p>
               <p
                 v-if="training.soon"
