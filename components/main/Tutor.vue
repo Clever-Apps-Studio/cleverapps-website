@@ -45,7 +45,7 @@ defineProps<IProps>();
       <div class="mt-5 leading-8" v-html="tutor.description"></div>
 
       <div class=" mt-2">
-        <p class="font-medium mb-2">Courses</p>
+        <p class="font-medium mb-3">Courses</p>
         <div class="flex flex-col md:flex-row items-center gap-2 ">
           <p class="bg-cleverGreen/20 p-2 px-3 rounded text-green-700 w-full md:w-auto" v-for="course in tutor.courses">{{ course }}</p>
         </div>
