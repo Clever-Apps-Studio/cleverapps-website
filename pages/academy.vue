@@ -38,8 +38,8 @@ const showModal = ref(false);
 const trainings = [
   {
     name: "Web Development Training",
-    start_date: "2025-02-01",
-    end_date: "2022-03-30",
+    start_date: "2025-03-01",
+    end_date: "2022-07-30",
     description:
       "Learn to build responsive and dynamic websites using modern tools and technologies like HTML, CSS, JavaScript, and frameworks.",
     modules: [
@@ -53,8 +53,8 @@ const trainings = [
   },
   {
     name: "Mobile Development Training",
-    start_date: "2025-02-01",
-    end_date: "2022-03-30",
+    start_date: "2025-03-01",
+    end_date: "2022-07-30",
     description:
       "Master the skills to create engaging and functional mobile apps for Android and iOS using platforms like React Native or Flutter.",
     modules: ["React-Native", "Firebase", "Deployment"],
@@ -228,6 +228,10 @@ const tutors = [
        <Tutor v-for="(tutor, idx) in tutors" :key="idx" :tutor="tutor"/>
     </div>
     <JoinCohort v-model="showModal" :training="currentTraining" />
+    <div class="flex flex-col gap-4 bg-slate-200 justify-center items-center p-10">
+      <p class="text-xl md:text-4xl font-bold"> For further information call</p>
+      <p class="text-xl md:text-4xl font-bold"> +233 249 4141 93</p>
+    </div>
     <div class="mt-auto">
       <Footer />
     </div>

@@ -33,12 +33,13 @@ const rules = {
 };
 
 const v$ = useVuelidate(rules, form);
-console.log("ssss", v$);
 const options = ref([
   { label: "Web Development Training", value: "web_app_dev" },
   { label: "Mobile Development Training", value: "mobile_app_dev" },
   { label: "UI/UX Design Training", value: "ui_ux_training" },
   { label: "Data Science Training", value: "data_science_training" },
+   { label: "Excel Training", value: "excel_training" },
+  { label: "Arduino Training", value: "arduino" },
 ]);
 
 const handleSend = async () => {
@@ -46,7 +47,6 @@ const handleSend = async () => {
     loading.value = true;
     v$.value.$validate();
 
-    console.log("sdfdf", v$.value.$error);
     if (v$.value.$error) {
       loading.value = false;
       return;
@@ -91,8 +91,9 @@ const handleClose = () => {
   });
 };
 
-watchEffect(() => {
-  if(props.training) {
+
+watch(() => props.training, () => {
+  if (props.training) {
     form.class = [props.training.value];
     form.waitingList = props.training.soon
   }
@@ -107,7 +108,7 @@ watchEffect(() => {
     :style="{ width: '35vw' }"
     :breakpoints="{ '1199px': '50vw', '915px': '90vw' }"
     ><template #header>
-      <h3 class="font-bold text-2xl">Join Cohort: {{ training.name }}</h3>
+      <h3 class="font-bold text-2xl">{{ training.soon ? 'Waiting List': 'Join Cohort' }}: {{ training.name }}</h3>
     </template>
     <div class="flex flex-col gap-5 w-full">
       <div class="w-full">

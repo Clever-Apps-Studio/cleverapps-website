@@ -36,7 +36,6 @@ const rules = {
 };
 
 const v$ = useVuelidate(rules, form);
-console.log("ssss", v$);
 const options = ref([
   { label: "Mobile app", value: "mobile_app" },
   { label: "Web app", value: "web_app" },
@@ -52,7 +51,6 @@ const handleSend = async () => {
     loading.value = true;
     v$.value.$validate();
 
-    console.log("sdfdf", v$.value.$error);
     if (v$.value.$error) {
       loading.value = false;
       return;

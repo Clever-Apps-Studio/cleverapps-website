@@ -11,7 +11,6 @@ const showSideBar = ref(false);
 const showModal = ref(false);
 onMounted(() => {
   window.addEventListener("scroll", () => {
-    console.log(window.scrollY);
     if (window.scrollY > 52) {
       document.getElementById("scroll-nav").style.top = "0";
     } else if (window.scrollY < 52) {
@@ -21,7 +20,6 @@ onMounted(() => {
 });
 
 const invert = computed(() => {
-  console.log("hey---", route.name);
   if (route.name.toLowerCase().includes("privacy")) {
     return true;
   }

@@ -23,10 +23,6 @@ const hideAmount = computed(() => {
   }
   return false;
 })
-
-watchEffect(() => {
-  console.log("location", location);
-})
 </script>
 
 <template>
