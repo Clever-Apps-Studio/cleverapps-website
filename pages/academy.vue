@@ -314,7 +314,7 @@ const tutors = [
       class="flex flex-col gap-4 bg-slate-200 justify-center items-center p-10"
     >
       <p class="text-xl md:text-4xl font-bold">For further information call</p>
-      <p class="text-xl md:text-4xl font-bold">+233 249 4141 93</p>
+      <p class="text-xl md:text-4xl font-bold">020 507 6696</p>
     </div>
     <div class="mt-auto">
       <Footer />
