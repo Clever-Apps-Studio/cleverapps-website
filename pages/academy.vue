@@ -216,7 +216,7 @@ const tutors = [
     company: "AgroInnova",
     company_website: "https://agroinnovagh.com/",
     description:
-      "Edward is astute software developer and UI/UX designer with over half a decade of experience work. He has excelled at UI/UX design and product design, leading the creation of innovative digital solutions for companies in Ghana and the UK. <br> Currently, he works as a UI/UX designer, software developer and project team lead at Agro Innova (An agri-tech company) based in Ghana. He is the founder and CEO of CODO, a Ghanaian mentorship and coaching organisation. He also leads the creatives for several businesses in the technology, education and medical sectors.",
+      "Edward is an astute software developer and UI/UX designer with over half a decade of work experience. He has excelled at UI/UX design and product design, leading the creation of innovative digital solutions for companies in Ghana and the UK. <br> Currently, he works as a UI/UX designer, software developer and project team lead at Agro Innova (An agri-tech company) based in Ghana. He is the founder and CEO of CODO, a Ghanaian mentorship and coaching organisation. He also leads the creatives for several businesses in the technology, education and medical sectors.",
     courses: ["UI/UX Design", "Frontend Development"],
     links: [
       {
