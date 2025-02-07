@@ -60,6 +60,7 @@ const trainings = [
     value: "ai_webinar",
     soon: false,
     isWebinar: true,
+    amount: "FREE"
   },
   {
     name: "Web Development Training",
@@ -317,7 +318,10 @@ const tutors = [
                 {{ idx + 1 }}. {{ item }}
               </li>
             </ul>
-            <div class="mt-4" v-if="training.amount">
+            <div v-if="training?.amount?.toLowerCase() === 'free'" class="">
+               <p class="text-3xl font-bold ">{{ training.amount }} !</p>
+            </div>
+            <div class="mt-4" v-else-if="training.amount">
               <p class="text-xl font-bold">{{ training.amount }}/month</p>
             </div>
             <div class="w-full md:w-1/2">
