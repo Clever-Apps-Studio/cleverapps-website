@@ -44,8 +44,9 @@ const showModal = ref(false);
 const trainings = [
   {
     name: "Free AI Integration Webinar",
-    start_date: "",
-    end_date: "",
+    start_date: "2025-02-13",
+    end_date: "2025-02-13",
+    online_time: "7pm - 8:30pm",
     description:
       "Learn how you can leverage various AI tools and platforms to enhance your workflow and improve productivity",
     modules: [
@@ -160,7 +161,7 @@ const illustrations: any = {
   data_science_training: DataI,
   excel_training: Excel,
   arduino: Arduino,
-  ai_webinar: Ai
+  ai_webinar: Ai,
 };
 
 const logos = [
@@ -213,11 +214,9 @@ const tutors = [
     role: "UI/UX Designer & Software Developer",
     company: "AgroInnova",
     company_website: "https://agroinnovagh.com/",
-    description: "Edward is astute software developer and UI/UX designer with over half a decade of experience work. He has excelled at UI/UX design and product design, leading the creation of innovative digital solutions for companies in Ghana and the UK. <br> Currently, he works as a UI/UX designer, software developer and project team lead at Agro Innova (An agri-tech company) based in Ghana. He is the founder and CEO of CODO, a Ghanaian mentorship and coaching organisation. He also leads the creatives for several businesses in the technology, education and medical sectors.",
-    courses: [
-      "UI/UX Design",
-      "Frontend Development"
-    ],
+    description:
+      "Edward is astute software developer and UI/UX designer with over half a decade of experience work. He has excelled at UI/UX design and product design, leading the creation of innovative digital solutions for companies in Ghana and the UK. <br> Currently, he works as a UI/UX designer, software developer and project team lead at Agro Innova (An agri-tech company) based in Ghana. He is the founder and CEO of CODO, a Ghanaian mentorship and coaching organisation. He also leads the creatives for several businesses in the technology, education and medical sectors.",
+    courses: ["UI/UX Design", "Frontend Development"],
     links: [
       {
         label: "LinkedIn",
@@ -226,7 +225,7 @@ const tutors = [
       {
         label: "Dribbble",
         url: "https://dribbble.com/Eddie_Watts",
-      }
+      },
     ],
   },
 ];
@@ -250,13 +249,16 @@ const tutors = [
     <div
       class="text-xl md:text-2xl p-2 flex text-center justify-center items-center bg-cleverYellow"
     >
-      
       <div>
         <a
           href="https://maps.app.goo.gl/SvJHcQVuebqpNU4MA"
           target="_blank"
           class="underline font-bold"
-          ><p><span><Icon class="!inline" name="ion:ios-location" size="40" /></span>Ennovate BLCK - Innovation Hub - Adenta</p></a
+          ><p>
+            <span
+              ><Icon class="!inline" name="ion:ios-location" size="40" /></span
+            >Ennovate BLCK - Innovation Hub - Adenta
+          </p></a
         >
         <p class="text-sm">Click here to get directions</p>
       </div>
@@ -285,7 +287,7 @@ const tutors = [
               <p class="md:text-xl font-bold font-title">
                 {{ dayjs(training.start_date).format("MMMM D, YYYY") }} -
                 {{ dayjs(training.end_date).format("MMMM D, YYYY") }}
-                <span
+                <span v-if="!training.isWebinar"
                   >({{
                     getDuration(training.start_date, training.end_date).months
                   }}
@@ -293,7 +295,7 @@ const tutors = [
                 >
               </p>
             </div>
-            <div v-if="!training.soon && !training.isWebinar">
+            <div v-if="!training.soon">
               <div
                 class="flex justify-center md:justify-start flex-wrap gap-2 mt-2"
               >
@@ -349,7 +351,12 @@ const tutors = [
     </div>
     <div class="mt-10 p-4 mx-0 md:mx-20 mb-20">
       <Title text="Tutors" class="mb-10" />
-      <Tutor v-for="(tutor, idx) in tutors" :key="idx" :tutor="tutor" class="mb-10" />
+      <Tutor
+        v-for="(tutor, idx) in tutors"
+        :key="idx"
+        :tutor="tutor"
+        class="mb-10"
+      />
     </div>
     <JoinCohort v-model="showModal" :training="currentTraining" />
     <div
