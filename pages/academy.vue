@@ -30,6 +30,7 @@ import python from "../../assets/images/python.png";
 import GPT from "../../assets/svg/gpt.svg?component";
 import Excel from "../../assets/svg/excel.svg?component";
 import Arduino from "../../assets/svg/arduino.svg?component";
+import Ai from "../../assets/svg/ai.svg?component";
 
 import { getDuration } from "~/utils/functions";
 
@@ -41,6 +42,24 @@ const currentTraining: any = ref(null);
 const showModal = ref(false);
 
 const trainings = [
+  {
+    name: "Free AI Integration Webinar",
+    start_date: "",
+    end_date: "",
+    description:
+      "Learn how you can leverage various AI tools and platforms to enhance your workflow and improve productivity",
+    modules: [
+      "How to run your own personal and local AI chatbot",
+      "How to leverage AI chat bots",
+      "Leveraging AI image and video generation",
+      "AI photo enhancements and edits",
+      "AI audio and music generation",
+      "Learn about various free AI tools",
+    ],
+    value: "ai_webinar",
+    soon: false,
+    isWebinar: true,
+  },
   {
     name: "Web Development Training",
     start_date: "2025-03-01",
@@ -141,6 +160,7 @@ const illustrations: any = {
   data_science_training: DataI,
   excel_training: Excel,
   arduino: Arduino,
+  ai_webinar: Ai
 };
 
 const logos = [
@@ -185,6 +205,28 @@ const tutors = [
         label: "Website",
         url: "https://benkissi.com/",
       },
+    ],
+  },
+  {
+    name: "Edward Watts Adjei",
+    image: "/tutors/eddy.png",
+    role: "UI/UX Designer & Software Developer",
+    company: "AgroInnova",
+    company_website: "https://agroinnovagh.com/",
+    description: "Edward is astute software developer and UI/UX designer with over half a decade of experience work. He has excelled at UI/UX design and product design, leading the creation of innovative digital solutions for companies in Ghana and the UK. <br> Currently, he works as a UI/UX designer, software developer and project team lead at Agro Innova (An agri-tech company) based in Ghana. He is the founder and CEO of CODO, a Ghanaian mentorship and coaching organisation. He also leads the creatives for several businesses in the technology, education and medical sectors.",
+    courses: [
+      "UI/UX Design",
+      "Frontend Development"
+    ],
+    links: [
+      {
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/in/edward-watts-adjei/",
+      },
+      {
+        label: "Dribbble",
+        url: "https://dribbble.com/Eddie_Watts",
+      }
     ],
   },
 ];
@@ -251,7 +293,7 @@ const tutors = [
                 >
               </p>
             </div>
-            <div v-if="!training.soon">
+            <div v-if="!training.soon && !training.isWebinar">
               <div
                 class="flex justify-center md:justify-start flex-wrap gap-2 mt-2"
               >
@@ -289,7 +331,7 @@ const tutors = [
                 >{{ training.soon ? "Coming Soon" : "Enroll Now" }}</Button
               >
               <p
-                v-if="!training.soon"
+                v-if="!training.soon && !training.isWebinar"
                 class="text-sm text-gray-400 mt-2 text-center"
               >
                 Limited seats available (30 seats)
@@ -307,7 +349,7 @@ const tutors = [
     </div>
     <div class="mt-10 p-4 mx-0 md:mx-20 mb-20">
       <Title text="Tutors" class="mb-10" />
-      <Tutor v-for="(tutor, idx) in tutors" :key="idx" :tutor="tutor" />
+      <Tutor v-for="(tutor, idx) in tutors" :key="idx" :tutor="tutor" class="mb-10" />
     </div>
     <JoinCohort v-model="showModal" :training="currentTraining" />
     <div
