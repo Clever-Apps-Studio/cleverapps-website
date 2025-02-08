@@ -27,7 +27,7 @@ const form: any = reactive({
 
 const rules = {
   full_name: { required },
-  email: { required, email },
+  email: { required },
   phone: {required},
   class: { required },
 };
