@@ -93,7 +93,7 @@ const handleClose = () => {
 };
 
 
-watch(() => props.training, () => {
+watch(() => localValue.value, () => {
   if (props.training) {
     form.class = [props.training.value];
     form.waitingList = props.training.soon
