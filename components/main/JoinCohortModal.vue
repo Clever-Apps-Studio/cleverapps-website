@@ -34,6 +34,7 @@ const rules = {
 
 const v$ = useVuelidate(rules, form);
 const options = ref([
+  { label: "AI webinar", value: "ai_webinar" },
   { label: "Web Development Training", value: "web_app_dev" },
   { label: "Mobile Development Training", value: "mobile_app_dev" },
   { label: "UI/UX Design Training", value: "ui_ux_training" },
@@ -162,7 +163,6 @@ watch(() => props.training, () => {
           placeholder="Select service type"
           :maxSelectedLabels="10"
           class="w-full border rounded-full"
-          disabled
         />
         <p v-if="v$.class.$errors.length" class="text-xs text-red-400">
           {{ v$.class.$errors.map((item) => item?.$message).join(", ") }}
