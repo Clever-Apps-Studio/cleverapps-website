@@ -105,7 +105,7 @@ const trainings = [
   {
     name: "UI/UX Design Training",
      start_date: "2025-03-01",
-    end_date: "2025-05-01",
+    end_date: "2025-07-01",
     offline_time: "6pm - 9pm",
     online_time: "4:30pm - 7:30pm",
     offline_days: ["Friday"],
