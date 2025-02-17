@@ -104,13 +104,17 @@ const trainings = [
 
   {
     name: "UI/UX Design Training",
-    start_date: "",
-    end_date: "",
+     start_date: "2025-03-01",
+    end_date: "2025-05-01",
+    offline_time: "6pm - 9pm",
+    online_time: "4:30pm - 7:30pm",
+    offline_days: ["Friday"],
+    online_days: ["Sunday"],
     description:
       "Gain expertise in designing user-friendly interfaces and seamless experiences through design principles, wireframing, and prototyping.",
-    modules: ["Figma", "Animation with Adobe After Effects"],
+    modules: ["Figma", "Animation with Adobe After Effects", "Introduction to Adobe Photoshop"],
     value: "ui_ux_training",
-    soon: true,
+    soon: false,
   },
   {
     name: "Data Science & AI integration Training",
