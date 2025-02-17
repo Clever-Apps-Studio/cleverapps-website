@@ -114,6 +114,7 @@ const trainings = [
       "Gain expertise in designing user-friendly interfaces and seamless experiences through design principles, wireframing, and prototyping.",
     modules: ["Figma", "Animation with Adobe After Effects", "Introduction to Adobe Photoshop"],
     value: "ui_ux_training",
+    amount: "₵700",
     soon: false,
   },
   {
