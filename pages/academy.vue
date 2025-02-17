@@ -42,26 +42,26 @@ const currentTraining: any = ref(null);
 const showModal = ref(false);
 
 const trainings = [
-  {
-    name: "Free AI Integration Webinar",
-    start_date: "2025-02-13",
-    end_date: "2025-02-13",
-    online_time: "7pm - 8:30pm",
-    description:
-      "Learn how you can leverage various AI tools and platforms to enhance your workflow and improve productivity",
-    modules: [
-      "How to run your own personal and local AI chatbot",
-      "How to leverage AI chat bots",
-      "Leveraging AI image and video generation",
-      "AI photo enhancements and edits",
-      "AI audio and music generation",
-      "Learn about various free AI tools",
-    ],
-    value: "ai_webinar",
-    soon: false,
-    isWebinar: true,
-    amount: "FREE"
-  },
+  // {
+  //   name: "Free AI Integration Webinar",
+  //   start_date: "2025-02-13",
+  //   end_date: "2025-02-13",
+  //   online_time: "7pm - 8:30pm",
+  //   description:
+  //     "Learn how you can leverage various AI tools and platforms to enhance your workflow and improve productivity",
+  //   modules: [
+  //     "How to run your own personal and local AI chatbot",
+  //     "How to leverage AI chat bots",
+  //     "Leveraging AI image and video generation",
+  //     "AI photo enhancements and edits",
+  //     "AI audio and music generation",
+  //     "Learn about various free AI tools",
+  //   ],
+  //   value: "ai_webinar",
+  //   soon: false,
+  //   isWebinar: true,
+  //   amount: "FREE"
+  // },
   {
     name: "Web Development Training",
     start_date: "2025-03-01",
@@ -293,7 +293,7 @@ const tutors = [
               <p class="md:text-xl font-bold font-title">
                 {{ dayjs(training.start_date).format("MMMM D, YYYY") }} -
                 {{ dayjs(training.end_date).format("MMMM D, YYYY") }}
-                <span v-if="!training.isWebinar"
+                <span v-if="!training?.isWebinar"
                   >({{
                     getDuration(training.start_date, training.end_date).months
                   }}
@@ -342,7 +342,7 @@ const tutors = [
                 >{{ training.soon ? "Coming Soon" : "Enroll Now" }}</Button
               >
               <p
-                v-if="!training.soon && !training.isWebinar"
+                v-if="!training.soon && !training?.isWebinar"
                 class="text-sm text-gray-400 mt-2 text-center"
               >
                 Limited seats available (30 seats)
