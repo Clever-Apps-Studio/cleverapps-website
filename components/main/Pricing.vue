@@ -29,6 +29,6 @@ const hideAmount = computed(() => {
   <div class="flex flex-col items-center p-5 md:p-20">
   
     <Title text="Pricing" class="mb-10" />
-    <PriceItem :hideAmount="hideAmount" v-for="item in prices" :item="item" />
+    <PriceItem :hideAmount="true" v-for="item in prices" :item="item" />
   </div>
 </template>

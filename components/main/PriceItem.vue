@@ -55,6 +55,13 @@ const props = defineProps<IProps>();
           ( billed monthly )
         </div>
       </div>
+      <div
+        v-else
+        class="flex flex-col items-center justify-center mt-4 mx-auto"
+      >
+        <p class="font-bold">Flexible Pricing.</p>
+        <p>Hourly rate or project based pricing</p>
+      </div>
       <div class="mt-10">
         <!-- <div class="mt-10 font-text text-[16px] font-[600]">What you get</div> -->
         <div class="mt-5">
